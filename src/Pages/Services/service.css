@@ -1,0 +1,14 @@
+.service {
+    background-image: url('../../assets/service_image_1.avif'), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Makes the background fixed while content scrolls */
+    height: 100vh; /* Adjust this to fit the height you need */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensure text is readable on the darkened background */
+    overflow: hidden; /* Prevents unwanted scrollbars */
+}

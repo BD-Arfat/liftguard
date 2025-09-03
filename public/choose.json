@@ -1,0 +1,30 @@
+[
+    {
+        "name" : "Expertise You Can Trust",
+        "proposition" : "Our team of seasoned engineers and safety professionals brings years of experience in delivering industry-leading safety solutions tailored to your needs.",
+        "id" : 1,
+        "data_count" : 1,
+        "icon" : "👷‍♂️"
+    },
+    {
+        "name" : "Comprehensive Services",
+        "proposition" : "From thorough inspections and load testing for passenger lifts to precise pressure gauge calibration, we offer a full suite of services to meet all your safety requirements.",
+        "id" : 2,
+        "data_count" : 2,
+        "icon" : "🔧"
+    },
+    {
+        "name" : "State-of-the-Art Technology",
+        "proposition" : "We utilize advanced tools such as load cells and tensile testing machines to ensure unmatched precision and reliability in every service we provide.",
+        "id" : 3,
+        "data_count" : 3,
+        "icon" : "⚙️"
+    },
+    {
+        "name" : "Adherence to International Standards",
+        "proposition" : "Our organization is approved by DIFE and MMD.We adhere to international standards such as LEEA and ASME. Additionally, we comply with government regulations and labor laws.",
+        "id" : 4,
+        "data_count" : 4,
+        "icon" : "🌐"
+    }
+]
