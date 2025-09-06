@@ -5,6 +5,9 @@ import Abouts from './Abouts/Abouts';
 import Service from './Service/Service';
 import Why_us from './Why_us/Why_us';
 import Video from './VideoSection/Video';
+import StatsSection from './StatsSection/StatsSection';
+import OurGallery from './OurGallery/OurGallery';
+import OurClients from './OurClients/OurClients';
 
 const Home = () => {
     // Scroll to the top (Banner section)
@@ -23,8 +26,11 @@ const Home = () => {
             </div>
             {/* <Video></Video> */}
             <Abouts />
+            <StatsSection></StatsSection>
             <Service />
             <Why_us />
+            <OurGallery></OurGallery>
+            <OurClients></OurClients>
 
             {/* Button to scroll to the Banner section */}
             <div className="fixed bottom-5 right-5">

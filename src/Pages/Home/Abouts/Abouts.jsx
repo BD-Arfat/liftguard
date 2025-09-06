@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import backgroundImage from '../../../assets/banner-image.png'; // 1920x1080 px HD image
+import backgroundImage from '../../../assets/abouts1.jpg'; // 1920x1080 px HD image
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -17,8 +17,8 @@ const Abouts = () => {
             style={{
                 // backgroundImage: `url(https://cdn.gamma.app/vx9w2d0pbaj4lcv/generated-images/6NcAyXPDmxpA9mofMUZD0.png)`,
                 // backgroundImage: `url(https://cdn.gamma.app/vx9w2d0pbaj4lcv/generated-images/LRL2fOPA7R5jdMVfImxdO.png)`,
-                // backgroundImage: `url(${backgroundImage})`,
-                backgroundImage: `url(https://images.unsplash.com/photo-1580205397275-76b5e8da1686?ixid=M3wxOTgwNzN8MHwxfHNlYXJjaHwzfHxBJTIwbWFzc2l2ZSUyMHNoaXAlMjBodWxsJTIwYmVpbmclMjBjb25zdHJ1Y3RlZCUyMGluJTIwYSUyMGRyeSUyMGRvY2slMkMlMjB3aXRoJTIwd29ya2VycyUyMGFuZCUyMGxhcmdlJTIwY3JhbmVzJTIwaW4lMjBhY3Rpb24ufGVufDF8fHx8MTc1NjkyMzMyOXww&ixlib=rb-4.1.0&w=3000&q=25)`,
+                backgroundImage: `url(${backgroundImage})`,
+                // backgroundImage: `url(https://images.unsplash.com/photo-1580205397275-76b5e8da1686?ixid=M3wxOTgwNzN8MHwxfHNlYXJjaHwzfHxBJTIwbWFzc2l2ZSUyMHNoaXAlMjBodWxsJTIwYmVpbmclMjBjb25zdHJ1Y3RlZCUyMGluJTIwYSUyMGRyeSUyMGRvY2slMkMlMjB3aXRoJTIwd29ya2VycyUyMGFuZCUyMGxhcmdlJTIwY3JhbmVzJTIwaW4lMjBhY3Rpb24ufGVufDF8fHx8MTc1NjkyMzMyOXww&ixlib=rb-4.1.0&w=3000&q=25)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
