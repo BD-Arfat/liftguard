@@ -4,7 +4,7 @@ import image3 from '../src/assets/ser-2.webp';
 
 const data = [
     {
-        image: image3,
+        image: 'https://media.licdn.com/dms/image/v2/D5612AQEXxbZkMGYI1Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1718732191197?e=2147483647&v=beta&t=DBoPpzPeEd1abmiGvbvAzdcq2WhUfugTwlg5UlwS_P8',
         name: "Lifting Equipment Inspection",
         proposition: "Ensuring your lifting equipment meets safety and operational standards through comprehensive inspections.",
         id: 1

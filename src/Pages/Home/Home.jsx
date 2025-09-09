@@ -26,8 +26,8 @@ const Home = () => {
             </div>
             {/* <Video></Video> */}
             <Abouts />
-            <StatsSection></StatsSection>
             <Service />
+            <StatsSection></StatsSection>
             <Why_us />
             <OurGallery></OurGallery>
             <OurClients></OurClients>

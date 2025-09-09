@@ -10,32 +10,29 @@ const Navbar = () => {
   // Handle scroll to add shadow and background color
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Toggle mobile menu
   const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
     document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
-  // Close the mobile menu
+  // Close mobile menu
   const closeMenu = () => {
     setIsOpen(false);
     document.body.style.overflow = "auto";
   };
 
   // Navbar link styles
-  const activeLinkClass = "text-yellow-400 border-b-2 border-yellow-400";
+  const activeLinkClass = "text-amber-400 border-b-2 border-amber-400";
   const linkClass =
-    "block px-4 py-2 text-slate-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 transition-all duration-300";
+    "block px-4 py-2 text-gray-200 hover:text-amber-400 hover:border-b-2 hover:border-amber-400 transition-all duration-300";
 
-  // Links for both desktop and mobile
   const navLinks = (
     <>
       <NavLink
@@ -79,28 +76,26 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 font-oswald transition-all duration-300 ${
-        isScrolled ? "bg-gray-800 shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 font-sans transition-all duration-300 ${
+        isScrolled ? "bg-[#0F766E] shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div>
-          <Link to="/">
-            <img
-              className="w-14 md:w-16 rounded-md shadow-lg"
-              src={logo}
-              alt="Logo"
-            />
-          </Link>
-        </div>
+        <Link to="/">
+          <img
+            className="w-14 md:w-16 rounded-md shadow-md"
+            src={logo}
+            alt="LiftGuard Logo"
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-lg">{navLinks}</div>
 
         {/* Mobile Menu Icon */}
         <div
-          className="md:hidden text-2xl text-white cursor-pointer"
+          className="md:hidden text-2xl text-white cursor-pointer transition-transform transform hover:scale-110"
           onClick={toggleNavbar}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -108,13 +103,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-40">
-          <div className="flex flex-col space-y-4 items-center justify-center h-full text-lg text-white">
-            {navLinks}
-          </div>
-        </div>
-      )}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center text-lg text-white transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {navLinks}
+      </div>
     </nav>
   );
 };

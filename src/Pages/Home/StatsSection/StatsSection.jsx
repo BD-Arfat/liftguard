@@ -5,7 +5,7 @@ const StatsSection = () => {
     const [services, setServices] = useState(0);
     const [countries, setCountries] = useState(0);
     const [ports, setPorts] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false); // animation once
+    const [hasAnimated, setHasAnimated] = useState(false);
 
     const sectionRef = useRef(null);
 
@@ -21,7 +21,7 @@ const StatsSection = () => {
                     setHasAnimated(true);
                 }
             },
-            { threshold: 0.3 } // 30% দেখা গেলে animation শুরু হবে
+            { threshold: 0.3 }
         );
 
         if (sectionRef.current) {
@@ -49,34 +49,27 @@ const StatsSection = () => {
     return (
         <div
             ref={sectionRef}
-            className="relative w-full md:mt-32 h-[400px] sm:h-[450px] md:h-[400px] lg:h-[400px] flex items-center justify-center bg-fixed bg-center bg-cover"
-            style={{
-                backgroundImage: "url('https://www.goi-international.com/images/lifting/proof-load-water-bag/one-img-bg.jpg')",
-            }}
+            className="relative w-full py-20 flex items-center justify-center mt-44 bg-[#0F766E]"
         >
-            {/* Black overlay - darker now */}
-            <div className="absolute inset-0 bg-black/80"></div>
-
             <div className="relative z-10 flex flex-col sm:flex-row flex-wrap justify-center sm:justify-around gap-8 sm:gap-12 w-full max-w-6xl text-center text-white px-4 font-oswald">
                 <div>
-                    <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold">{clients}+</h2>
-                    <p className="mt-2 text-xl md:text-2xl">Client</p>
+                    <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">{clients}+</h2>
+                    <p className="mt-2 text-lg md:text-xl">Clients</p>
                 </div>
                 <div>
-                    <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold">{services}+</h2>
-                    <p className="mt-2 text-xl md:text-2xl">Service Work</p>
+                    <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">{services}+</h2>
+                    <p className="mt-2 text-lg md:text-xl">Service Works</p>
                 </div>
                 <div>
-                    <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold">{countries}+</h2>
-                    <p className="mt-2 text-xl md:text-2xl">Country</p>
+                    <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">{countries}+</h2>
+                    <p className="mt-2 text-lg md:text-xl">Countries</p>
                 </div>
                 <div>
-                    <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold">{ports}+</h2>
-                    <p className="mt-2 text-xl md:text-2xl">Port</p>
+                    <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">{ports}+</h2>
+                    <p className="mt-2 text-lg md:text-xl">Ports</p>
                 </div>
             </div>
         </div>
-
     );
 };
 
