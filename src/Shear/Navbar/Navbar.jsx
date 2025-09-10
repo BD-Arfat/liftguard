@@ -84,7 +84,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            className="w-14 md:w-16 rounded-md shadow-md"
+            className="w-14 md:w-28 md:h-12 rounded-md shadow-md"
             src={logo}
             alt="LiftGuard Logo"
           />

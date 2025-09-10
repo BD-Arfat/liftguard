@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4 md:px-8">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <img src={logo} alt="Logo" className="w-16 h-16 rounded-md mb-3" />
+          <img src={logo} alt="Logo" className="w-16 md:w-44 h-16 md:h-20 rounded-md mb-3" />
           <span className="text-xl font-semibold text-white">LIFTGUARD SOLUTION</span>
           <p className="mt-4 text-sm text-gray-300 max-w-xs">
             The Guardian of Equipment Safety ensures protection and reliability,
