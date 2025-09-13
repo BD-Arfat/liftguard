@@ -1,72 +1,35 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "../../Service/Service.css";
 
 const ServiceProducts = ({ service }) => {
   const { image, name, proposition } = service;
   const [showFullText, setShowFullText] = useState(false);
 
-  const toggleText = () => {
-    setShowFullText(!showFullText);
-  };
-
   return (
-    <div className="flex justify-center py-4">
-      <div className="relative w-full">
-        {/* Rotating Border */}
-        <div className="absolute inset-0 z-0 border-animation rounded-xl"></div>
-
-        {/* Card Content */}
-        <motion.div
-          className="relative bg-white border border-gray-300 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow z-10"
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0px 12px 18px rgba(0, 0, 0, 0.1)",
-            y: -4,
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          {/* Image with hover zoom effect */}
-          <motion.img
-            src={image}
-            alt={name}
-            className="w-full h-40 object-cover"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          />
-
-          <div className="p-4">
-            {/* Title with hover color transition */}
-            <motion.h3
-              className="text-gray-900 font-semibold text-lg mb-2 hover:text-indigo-500 transition-colors duration-300"
-              whileHover={{ color: "#6c63ff" }}
-            >
-              {name}
-            </motion.h3>
-
-            {/* Description text with fade-in animation */}
-            <motion.p
-              className="text-gray-600 text-sm mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              {showFullText ? proposition : `${proposition.slice(0, 90)}...`}
-            </motion.p>
-
-            {/* Read More / Show Less button */}
-            <motion.button
-              onClick={toggleText}
-              className="text-indigo-600 text-xs font-semibold focus:outline-none hover:text-indigo-800 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              {showFullText ? "Show Less" : "Read More"}
-            </motion.button>
-          </div>
-        </motion.div>
+    <motion.div
+      className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      whileHover={{ y: -6 }}
+    >
+      {/* Image with overlay effect */}
+      <div className="relative">
+        <img src={image} alt={name} className="w-full h-48 object-cover" />
+        <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity"></div>
       </div>
-    </div>
+
+      <div className="p-5">
+        <h3 className="text-xl font-semibold text-[#0F766E] mb-2">{name}</h3>
+        <p className="text-gray-600 text-sm">
+          {showFullText ? proposition : `${proposition.slice(0, 80)}...`}
+        </p>
+
+        <button
+          onClick={() => setShowFullText(!showFullText)}
+          className="mt-3 text-[#F59E0B] text-xs font-bold hover:underline"
+        >
+          {showFullText ? "Show Less" : "Read More"}
+        </button>
+      </div>
+    </motion.div>
   );
 };
 

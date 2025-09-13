@@ -30,7 +30,7 @@ const Services = () => {
         className="relative py-40 flex items-center justify-center"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1604930270269-67876a4cbe4a?ixid=M3wxOTgwNzN8MHwxfHNlYXJjaHwxMHx8c2hpcCUyMHdpdGglMjB3b3JrYXJ8ZW58MXx8fHwxNzU2OTIzNjc2fDA&ixlib=rb-4.1.0&w=3000&q=60)",
+            "url(https://img.freepik.com/premium-photo/indian-worker-special-uniform-helmet-controls-lift-manually_1429-11824.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import bannerVideo from '../../../video/banner-video-1.mp4';
+import bannerVideo from '../../../video/video.mp4';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
