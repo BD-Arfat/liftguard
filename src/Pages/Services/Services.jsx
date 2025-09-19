@@ -6,6 +6,8 @@ import PressureTest from "./PressureTest/PressureTest";
 import AboutNdt from "./AboutNdt/AboutNdt";
 import Ndt from "./Ndt/Ndt";
 import { FaArrowUp } from "react-icons/fa";
+import BookSlider from "./BookSlider/BookSlider";
+import EquipmentCard from "./EquipmentCard/EquipmentCard";
 
 const Services = () => {
   useEffect(() => {
@@ -24,6 +26,7 @@ const Services = () => {
 
   return (
     <div className="overflow-hidden relative bg-gray-50">
+
       {/* Hero Section */}
       <div
         id="loda-test"
@@ -61,13 +64,21 @@ const Services = () => {
         </div>
       </div>
 
+
+
       {/* Services Sections */}
-      <div className="max-w-7xl mx-auto px-4 py-16 space-y-20">
-        <LoadTest data-aos="fade-up" />
+      <div className=" mx-auto px-4 py-16 space-y-20">
+        {/* <LoadTest data-aos="fade-up" /> */}
+        <EquipmentCard></EquipmentCard>
         <PressureTest data-aos="fade-up" />
+        {/* BookSlider section start */}
+        <BookSlider></BookSlider>
+        {/* BookSlider section end */}
         <AboutNdt data-aos="fade-up" />
         <Ndt data-aos="fade-up" />
       </div>
+
+
 
       {/* Scroll to Top Button */}
       <div className="fixed bottom-6 right-6 z-50">
@@ -78,6 +89,7 @@ const Services = () => {
           <FaArrowUp size={20} />
         </button>
       </div>
+
     </div>
   );
 };
