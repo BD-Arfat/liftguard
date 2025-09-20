@@ -10,12 +10,14 @@ const OurAllClients = () => {
     const fetchClients = async () => {
       const data = [
         "https://krshiprecycling.com/_astro/logo_dark.3b76f077.svg",
-        "http://krsteelstructure.com/wp-content/uploads/2020/11/KRSteelStructureLed-logo.png",
-        "https://arabshiprecycling.com/assets/ASBRL_Logo-Bs7ByH4m.png",
-        "http://krsteelstructure.com/wp-content/uploads/2020/11/KRSteelStructureLed-logo.png",
-        "https://krshiprecycling.com/_astro/logo_dark.3b76f077.svg",
-        "http://krsteelstructure.com/wp-content/uploads/2020/11/KRSteelStructureLed-logo.png",
-        "https://safetyzenbd.com/wp-content/uploads/2025/07/Safetyzen-Logo.webp",
+            "http://krsteelstructure.com/wp-content/uploads/2020/11/KRSteelStructureLed-logo.png",
+            "https://arabshiprecycling.com/assets/ASBRL_Logo-Bs7ByH4m.png",
+            "https://safetyzenbd.com/wp-content/uploads/2025/07/Safetyzen-Logo.webp",
+            "https://cliftongroupbd.com/wp-content/uploads/2023/09/clifton-logo.png1_.png",
+            "https://pms-bd.com/wp-content/uploads/2024/11/PMS_LOGO-removebg-preview.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzrqzd6xOiRJ4-rjn43QwHErBA9qACtcmFvQJNRZafln0BkhWjMDbL2FLxJU7Bj4mBjmI&usqp=CAU",
+            "https://intermarinebd.com/wp-content/uploads/2025/06/Intermarine-ship-service-logo-light-version1-copy@2x-scaled.png",
+            "https://media.licdn.com/dms/image/v2/C560BAQGDxWgSbdWvQQ/company-logo_200_200/company-logo_200_200/0/1670992527266?e=2147483647&v=beta&t=PruTL1w48Ic_FR_ZwbqDZjW0tzfIcZR22GARlDH5qoU",
       ];
       setClients(data);
     };

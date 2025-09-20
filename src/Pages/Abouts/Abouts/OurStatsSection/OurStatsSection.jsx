@@ -27,10 +27,10 @@ const OurStatsSection = () => {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting && !hasAnimated) {
-          animateValue(0, 100, setClients, 2000);
-          animateValue(0, 380, setServices, 2200);
-          animateValue(0, 26, setCountries, 2400);
-          animateValue(0, 70, setPorts, 2600);
+          animateValue(0, 70, setClients, 2000);
+          animateValue(0, 400, setServices, 2200);
+          animateValue(0, 20, setCountries, 2400);
+          animateValue(0, 5, setPorts, 2600);
           setHasAnimated(true);
         }
       },
@@ -61,28 +61,28 @@ const OurStatsSection = () => {
           <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
             {clients}+
           </h2>
-          <p className="mt-2 text-lg md:text-xl">Clients</p>
+          <p className="mt-2 text-lg md:text-xl">Loyar Clients</p>
         </div>
 
         <div>
           <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
             {services}+
           </h2>
-          <p className="mt-2 text-lg md:text-xl">Service Works</p>
+          <p className="mt-2 text-lg md:text-xl">Successful Projects</p>
         </div>
 
         <div>
           <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
             {countries}+
           </h2>
-          <p className="mt-2 text-lg md:text-xl">Countries</p>
+          <p className="mt-2 text-lg md:text-xl">Skilled Professinoals</p>
         </div>
 
         <div>
           <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
             {ports}+
           </h2>
-          <p className="mt-2 text-lg md:text-xl">Ports</p>
+          <p className="mt-2 text-lg md:text-xl">Years Of Dedication</p>
         </div>
       </div>
     </section>
