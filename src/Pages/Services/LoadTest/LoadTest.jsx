@@ -1,63 +1,191 @@
 import React from "react";
-import image2 from "../../../assets/our-service-1 (2).jpg";
 
 const LoadTest = () => {
   return (
-    <section className="bg-white container mx-auto px-4 md:px-16 md:mb-20 md:flex flex-col md:flex-row items-center justify-center">
-      <div className="lg:flex md:items-center justify-center md:w-11/12 md:mx-auto gap-10">
-        {/* Left: Service List */}
-        <div data-aos="fade-right" className="lg:w-1/2">
-          <h1 className="font-extrabold text-[#0F766E] text-2xl md:text-3xl uppercase mb-6">
-            Scope Of Inspection & Load Test
-          </h1>
-          <ul className="list-disc list-inside space-y-3 text-gray-700 font-oswald">
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Passengers & cargo lift inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Man lift inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Forklift inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Tower crane inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Overhead crane inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Excavator & wheel loader inspection.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Mobile crane inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Electric or diesel winch machine inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              Truck crane inspection & load test.
-            </li>
-            <li className="hover:text-[#0F766E] transition-colors duration-300">
-              All types of lifting equipment & lifting gear inspection & load
-              test (webbing sling, round sling, chain sling automotive hoist,
-              manual chain block, lever hoist, chain block, lifting pulley, all
-              types of clamps, lifting boom, hydraulic trolley, eye bolt,
-              shackles, etc.)
-            </li>
-          </ul>
-        </div>
+    <section className="bg-gradient-to-b from-white via-[#0F766E]/5 to-white py-16 px-4 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto space-y-20">
+        {/* Hero Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Image */}
+          <div className="lg:w-1/2 relative flex items-center justify-center">
+            {/* Decorative shapes */}
+            <div className="absolute -top-6 -left-6 w-20 h-20 bg-[#0F766E]/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-10 right-10 w-28 h-28 bg-[#0F766E]/30 rounded-full blur-3xl"></div>
 
-        {/* Right: Images */}
-        <div className="lg:w-1/2 mt-8 md:mt-0 flex items-center justify-center mb-20">
-          <div data-aos="fade-left" className="relative">
-            <img
-              src={image2}
-              alt="Service"
-              className="rounded-lg shadow-lg border-4 border-[#0F766E]/30 hover:scale-105 transition-transform duration-500"
-            />
+            {/* <img
+              src="https://i.ibb.co.com/Kz5Kx613/Whats-App-Image-2025-09-21-at-22-06-09-4189453b.jpg"
+              alt="Liftguard Solution"
+              className="relative z-10 w-80 md:w-[400px] rounded-xl shadow-2xl border-4 border-[#0F766E]/40"
+            /> */}
           </div>
         </div>
+
+        {/* text */}
+        <div className="md:w-11/12 md:mx-auto text-center ">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-[#0F766E] mb-4">
+            Crane & Lifting Equipment Inspection & Testing in Bangladesh
+          </h1>
+          {/* Who We Are */}
+          {/* Who We Are + Our Expertise Section */}
+          <div className="grid md:grid-cols-2 gap-10 mt-10 md:mt-20">
+            {/* Who We Are */}
+            <div className="relative max-w-xl mx-auto group">
+
+              {/* Card Container */}
+              <div className="relative bg-white p-8 rounded-2xl shadow-2xl border-l-8 border-[#0F766E] overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-3xl">
+
+                {/* Decorative top line */}
+                <div className="absolute top-0 left-0 w-24 h-1 bg-[#0F766E] rounded-r-lg"></div>
+
+                {/* Decorative floating circles */}
+                <div className="absolute -top-3 -right-3 w-5 h-5 bg-[#0F766E] rounded-full animate-bounce opacity-70"></div>
+                <div className="absolute bottom-5 -left-5 w-3 h-3 bg-[#0F766E] rounded-full animate-pulse opacity-60"></div>
+
+                {/* Title */}
+                <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-4 flex items-center gap-3">
+                  <span className="w-3 h-3 bg-[#0F766E] rounded-full animate-ping"></span>
+                  Who We Are
+                </h2>
+
+                {/* Paragraph */}
+                <p className="text-gray-700 text-left leading-relaxed text-lg">
+                  <span className="font-semibold text-[#0F766E]">Liftguard Solution</span> is a trusted provider of
+                  <span className="font-medium"> Inspection & Testing Services</span> for cranes and lifting equipment
+                  in both <span className="italic">industrial</span> and <span className="italic">marine</span> sectors across Bangladesh.
+                  We deliver complete solutions — <span className="font-semibold">testing, examination, repair supervision, and certification</span> —
+                  ensuring your equipment is always <span className="text-[#0F766E] font-semibold">safe, compliant, and reliable.</span>
+                </p>
+              </div>
+
+              {/* Background Gradient Shadow for depth */}
+              <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-[#D1FAE5]/40 to-white rounded-2xl blur-3xl"></div>
+            </div>
+
+            {/* Our Expertise */}
+            <div className="relative bg-white p-8 rounded-xl shadow-xl border-l-8 border-[#0F766E]">
+              {/* Decorative top line */}
+              <div className="absolute top-0 left-0 w-24 h-1 bg-[#0F766E] rounded-r-lg"></div>
+
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#0F766E] rounded-full"></span>
+                Our Expertise
+              </h2>
+
+              <div className="space-y-4 text-gray-700 text-left text-lg">
+                <p>
+                  🏭 <span className="font-semibold">Industries:</span> Factories, manufacturing plants, power plants, steel, cement, and textile sectors
+                </p>
+                <p>
+                  🚢 <span className="font-semibold">Marine:</span> Shipyards, dockyards, offshore platforms, and cargo handling operations
+                </p>
+                <p>
+                  Our team is equipped to handle everything from technical safety evaluations to design and structural analysis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        {/* Why Load Testing */}
+        <div className="max-w-6xl mx-auto px-4 md:py-40 flex flex-col lg:flex-row items-start gap-16 relative">
+
+          {/* Left Image */}
+          <div className="lg:w-1/2 w-full relative z-10">
+            <img
+              src="https://i.ibb.co.com/Kz5Kx613/Whats-App-Image-2025-09-21-at-22-06-09-4189453b.jpg"
+              alt="Load Testing"
+              className="rounded-3xl shadow-2xl w-full object-cover transform transition duration-500 hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-black/20 rounded-3xl pointer-events-none"></div>
+          </div>
+
+          {/* Right Content Cards */}
+          <div className="lg:w-1/2 w-full flex flex-col gap-12 relative z-20">
+
+            {/* Card 1 */}
+            <div className="bg-gradient-to-br from-[#D1FAE5] to-white border-l-8 border-[#0F766E] rounded-3xl p-8 shadow-2xl transform -rotate-1 hover:rotate-0 transition duration-500">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F766E] mb-6">
+                Why Load Testing is Essential
+              </h2>
+              <ul className="space-y-4 text-gray-700 list-disc list-inside text-lg">
+                <li>Confirms cranes and hoists can safely handle their rated capacity</li>
+                <li>Required for: New installations, after repairs, modifications, or alterations, before returning to service</li>
+                <li>Guarantees safe operation and compliance with international standards</li>
+              </ul>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-gradient-to-br from-white to-[#E0F2FE] border-r-8 border-[#0F766E] rounded-3xl p-8 shadow-2xl transform rotate-1 hover:-rotate-0 transition duration-500">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6">
+                Our Load Testing Process
+              </h2>
+              <ol className="space-y-3 text-gray-700 list-decimal list-inside text-lg">
+                <li>Define equipment objectives and requirements</li>
+                <li>Review operating procedures and usage conditions</li>
+                <li>Select proper tools and testing methods</li>
+                <li>Perform static and dynamic load tests</li>
+                <li>Verify performance, safety, and compliance</li>
+              </ol>
+            </div>
+
+          </div>
+
+          {/* Decorative Dots */}
+          <div className="hidden lg:block absolute top-10 right-0 w-2 h-2 bg-[#0F766E] rounded-full animate-pulse"></div>
+          <div className="hidden lg:block absolute bottom-20 left-1/2 w-3 h-3 bg-[#0F766E] rounded-full animate-bounce"></div>
+
+        </div>
+
+        {/* Process */}
+        {/* <div>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
+            Our Load Testing Process
+          </h2>
+          <ol className="space-y-3 text-gray-700 list-decimal list-inside">
+            <li>Define equipment objectives and requirements</li>
+            <li>Review operating procedures and usage conditions</li>
+            <li>Select proper tools and testing methods</li>
+            <li>Perform static and dynamic load tests</li>
+            <li>Verify performance, safety, and compliance</li>
+          </ol>
+        </div> */}
+
+        {/* Inspection & Certification */}
+        {/* <div>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
+            Inspection & Certification Services
+          </h2>
+          <ul className="grid md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
+            <li>Brakes, clutches, sheaves, and wire rope assemblies check</li>
+            <li>Design studies and calculation reviews</li>
+            <li>Static and dynamic load testing</li>
+            <li>Inspection of structural load-bearing members</li>
+            <li>Overhead crane girders, rails, and column checks</li>
+            <li>Gantry surveys (line level & span)</li>
+            <li>NDT of load hooks + visual inspections</li>
+            <li>Operational performance tests</li>
+            <li>Periodic & pre-use inspections (mechanical, structural, electrical, safety systems)</li>
+            <li>Wire rope and chain inspections</li>
+            <li>Regulatory compliance assessments</li>
+            <li>Remaining life assessments</li>
+            <li>Repair supervision</li>
+          </ul>
+        </div> */}
+
+        {/* Why Choose Us */}
+        {/* <div className="bg-[#0F766E]/10 p-8 rounded-xl shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
+            Why Choose Liftguard Solution?
+          </h2>
+          <ul className="grid md:grid-cols-2 gap-4 text-gray-700 font-medium">
+            <li>✔ Expertise in both Industrial & Marine sectors</li>
+            <li>✔ Qualified inspection & testing professionals</li>
+            <li>✔ Compliance with international standards</li>
+            <li>✔ 24/7 service availability across Bangladesh</li>
+          </ul>
+        </div> */}
       </div>
     </section>
   );

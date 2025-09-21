@@ -53,36 +53,43 @@ const OurStatsSection = () => {
           "url('https://certifiedsafetyexperts.com/wp-content/uploads/2024/09/crane-inspection-procedures.jpg')",
       }}
     >
-      {/* Darker overlay for better visibility */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
-      <div className="relative z-10 flex flex-col sm:flex-row flex-wrap justify-center sm:justify-around gap-8 sm:gap-12 w-full max-w-6xl text-center text-white px-4 font-oswald">
-        <div>
-          <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
-            {clients}+
-          </h2>
-          <p className="mt-2 text-lg md:text-xl">Loyar Clients</p>
-        </div>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-6xl px-4 text-white font-oswald">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Card 1 */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+            <h2 className="text-6xl md:text-7xl font-extrabold text-[#F59E0B]">
+              {clients}+
+            </h2>
+            <p className="mt-3 text-lg md:text-xl">Loyal Clients</p>
+          </div>
 
-        <div>
-          <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
-            {services}+
-          </h2>
-          <p className="mt-2 text-lg md:text-xl">Successful Projects</p>
-        </div>
+          {/* Card 2 */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+            <h2 className="text-6xl md:text-7xl font-extrabold text-[#F59E0B]">
+              {services}+
+            </h2>
+            <p className="mt-3 text-lg md:text-xl">Successful Projects</p>
+          </div>
 
-        <div>
-          <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
-            {countries}+
-          </h2>
-          <p className="mt-2 text-lg md:text-xl">Skilled Professinoals</p>
-        </div>
+          {/* Card 3 */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+            <h2 className="text-6xl md:text-7xl font-extrabold text-[#F59E0B]">
+              {countries}+
+            </h2>
+            <p className="mt-3 text-lg md:text-xl">Skilled Professionals</p>
+          </div>
 
-        <div>
-          <h2 className="text-5xl sm:text-6xl font-extrabold text-[#F59E0B]">
-            {ports}+
-          </h2>
-          <p className="mt-2 text-lg md:text-xl">Years Of Dedication</p>
+          {/* Card 4 */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+            <h2 className="text-6xl md:text-7xl font-extrabold text-[#F59E0B]">
+              {ports}+
+            </h2>
+            <p className="mt-3 text-lg md:text-xl">Years Of Dedication</p>
+          </div>
         </div>
       </div>
     </section>

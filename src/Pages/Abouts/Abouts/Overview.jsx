@@ -16,7 +16,7 @@ const Overview = () => {
       
       {/* Hero Header */}
       <div
-        className="relative w-full top-0 h-64 md:h-96 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
+        className="relative w-full top-0 h-screen md:h-96 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
         style={{
           backgroundImage: `url(https://media.licdn.com/dms/image/v2/D5612AQEXxbZkMGYI1Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1718732191197?e=2147483647&v=beta&t=DBoPpzPeEd1abmiGvbvAzdcq2WhUfugTwlg5UlwS_P8)`,
           backgroundSize: "cover",
@@ -43,10 +43,10 @@ const Overview = () => {
       >
         {/* Text */}
         <div className="md:w-1/2 space-y-6">
-          <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-justify text-[#0F1B3D] leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl mx-5 md:mx-0 text-justify text-[#0F1B3D] leading-relaxed">
             Welcome to <span className="font-semibold text-[#0F766E]">Liftguard Solutions</span>, a proud sister concern of KR Group and a leading name in safety solutions in Bangladesh. We specialize in innovative and reliable safety technologies for lifting gear and heavy equipment, ensuring the highest standards of workplace safety and accident prevention.
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-justify text-[#0F1B3D] leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl mx-5 md:mx-0 lg:text-lg xl:text-xl text-justify text-[#0F1B3D] leading-relaxed">
             Founded with a mission to revolutionize safety in industrial and construction environments, Liftguard Solutions is committed to designing and delivering cutting-edge solutions that protect personnel and assets during lifting operations. Our services include comprehensive inspection, load testing, and pressure testing for a wide range of equipment, including cranes, forklifts, compressors, and lifting gear.
           </p>
         </div>
@@ -71,10 +71,10 @@ const Overview = () => {
         data-aos="fade-up"
         className="mt-16 max-w-5xl mx-auto space-y-6 px-2 sm:px-4 md:px-0"
       >
-        <p className="text-base sm:text-lg md:text-xl text-[#0F1B3D] leading-relaxed">
+        <p className="text-base mx-5 md:mx-0 sm:text-lg md:text-xl text-[#0F1B3D] leading-relaxed">
           With a team of dedicated engineers, technicians, and safety professionals, we combine expertise and innovation to meet international safety standards. Our state-of-the-art equipment, including high-capacity load cells and tensile testing machines, ensures precision and reliability in every project.
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-[#0F1B3D] leading-relaxed">
+        <p className="text-base sm:text-lg mx-5 md:mx-0 md:text-xl text-[#0F1B3D] leading-relaxed">
           Choose <span className="font-semibold text-[#0F766E]">Liftguard Solutions</span> for a safer, more efficient workplace. Together, let’s build a future where safety is paramount.
         </p>
       </div>
