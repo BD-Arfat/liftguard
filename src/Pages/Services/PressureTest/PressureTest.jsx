@@ -5,7 +5,7 @@ const PressureTest = () => {
   return (
     <section
       data-aos="fade-up"
-      className="relative bg-gradient-to-b from-white via-[#0F766E]/5 to-white py-16 px-4 md:px-12 lg:px-20"
+      className="relative md:py-48 bg-gradient-to-b from-white via-[#0F766E]/5 to-white py-16 px-4 md:px-12 lg:px-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left: Image */}

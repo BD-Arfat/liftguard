@@ -51,51 +51,72 @@ const NDTServices = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-teal-50 to-slate-100 py-20 px-6 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto">
+    <section
+      className="relative bg-fixed bg-cover bg-center py-28 px-6 overflow-hidden"
+      style={{
+        backgroundImage:
+          "url('https://www.sandberg.co.uk/wp-content/uploads/2025/02/welding.jpg')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F766E]/80 to-[#0F1B3D]/80"></div>
+
+      <div className="relative max-w-7xl mx-auto text-white">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our NDT Testing & Inspection Services
+        <div className="text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-xl">
+            Our{" "}
+            <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 bg-clip-text text-transparent">
+              NDT Testing & Inspection
+            </span>{" "}
+            Services
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At <span className="font-semibold text-[#0F766E]">Liftguard Solution</span>, we
-            provide a wide range of Non-Destructive Testing (NDT) and inspection services
-            to ensure safety, reliability, and compliance for industrial and marine
-            applications.
+          <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            At{" "}
+            <span className="font-semibold text-cyan-400">
+              Liftguard Solution
+            </span>
+            , we provide a wide range of Non-Destructive Testing (NDT) and
+            inspection services to ensure safety, reliability, and compliance
+            for industrial and marine applications.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-2">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-500"
+              className={`relative group p-8 rounded-3xl border border-white/10 backdrop-blur-xl shadow-lg hover:shadow-[0_0_50px_rgba(0,255,255,0.4)] hover:scale-105 transition-all duration-500`}
+              style={{
+                transform: index % 2 === 0 ? "translateY(0)" : "translateY(30px)",
+              }}
             >
-              {/* Gradient Accent with Brand Color */}
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-[#0F766E] to-[#0F766E] rounded-3xl blur-lg opacity-10 group-hover:opacity-20 transition duration-500"
-              ></div>
+              {/* Gradient Badge */}
+              <div className="absolute -top-5 -left-5 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-black font-bold text-lg shadow-lg">
+                {index + 1}
+              </div>
 
-              <div className="relative">
-                <h3
-                  className="text-2xl font-bold bg-gradient-to-r from-[#0F766E] to-[#0F766E] bg-clip-text text-transparent mb-6"
-                >
+              {/* Card Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">
                   {service.title}
                 </h3>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-3">
                   {service.items.map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2 hover:text-[#0F766E] transition"
+                      className="flex items-start gap-3 hover:text-teal-400 transition-colors duration-300"
                     >
-                      <span className="text-[#0F766E]">✅</span>
+                      <span className="text-cyan-400 text-lg">✔</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
+
+              {/* Hover Glow */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/30 via-teal-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 blur-2xl transition duration-500"></div>
             </div>
           ))}
         </div>

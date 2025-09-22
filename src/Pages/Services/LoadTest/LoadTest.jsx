@@ -138,54 +138,57 @@ const LoadTest = () => {
 
         </div>
 
-        {/* Process */}
-        {/* <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
-            Our Load Testing Process
-          </h2>
-          <ol className="space-y-3 text-gray-700 list-decimal list-inside">
-            <li>Define equipment objectives and requirements</li>
-            <li>Review operating procedures and usage conditions</li>
-            <li>Select proper tools and testing methods</li>
-            <li>Perform static and dynamic load tests</li>
-            <li>Verify performance, safety, and compliance</li>
-          </ol>
-        </div> */}
 
-        {/* Inspection & Certification */}
-        {/* <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
-            Inspection & Certification Services
-          </h2>
-          <ul className="grid md:grid-cols-2 gap-4 text-gray-700 list-disc list-inside">
-            <li>Brakes, clutches, sheaves, and wire rope assemblies check</li>
-            <li>Design studies and calculation reviews</li>
-            <li>Static and dynamic load testing</li>
-            <li>Inspection of structural load-bearing members</li>
-            <li>Overhead crane girders, rails, and column checks</li>
-            <li>Gantry surveys (line level & span)</li>
-            <li>NDT of load hooks + visual inspections</li>
-            <li>Operational performance tests</li>
-            <li>Periodic & pre-use inspections (mechanical, structural, electrical, safety systems)</li>
-            <li>Wire rope and chain inspections</li>
-            <li>Regulatory compliance assessments</li>
-            <li>Remaining life assessments</li>
-            <li>Repair supervision</li>
-          </ul>
-        </div> */}
 
         {/* Why Choose Us */}
-        {/* <div className="bg-[#0F766E]/10 p-8 rounded-xl shadow-lg">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 text-center lg:text-left">
-            Why Choose Liftguard Solution?
-          </h2>
-          <ul className="grid md:grid-cols-2 gap-4 text-gray-700 font-medium">
-            <li>✔ Expertise in both Industrial & Marine sectors</li>
-            <li>✔ Qualified inspection & testing professionals</li>
-            <li>✔ Compliance with international standards</li>
-            <li>✔ 24/7 service availability across Bangladesh</li>
-          </ul>
-        </div> */}
+        <div
+  className="relative p-10 rounded-3xl shadow-xl bg-cover bg-center "
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1581090700227-4c4d8a1c3e11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')",
+  }}
+>
+  {/* Overlay color */}
+  <div className="absolute inset-0 bg-[#0F766E]/80 rounded-3xl"></div>
+
+  {/* Content */}
+  <div className="relative z-10 ">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-10 text-center">
+      Why Choose Liftguard Solution?
+    </h2>
+
+    <ul className="grid md:grid-cols-2 gap-6 text-white font-medium">
+      <li className="flex items-center gap-4 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#0F766E] text-lg font-bold">
+          ✓
+        </span>
+        <p>Expertise in both Industrial & Marine sectors</p>
+      </li>
+
+      <li className="flex items-center gap-4 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#0F766E] text-lg font-bold">
+          ✓
+        </span>
+        <p>Qualified inspection & testing professionals</p>
+      </li>
+
+      <li className="flex items-center gap-4 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#0F766E] text-lg font-bold">
+          ✓
+        </span>
+        <p>Compliance with international standards</p>
+      </li>
+
+      <li className="flex items-center gap-4 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#0F766E] text-lg font-bold">
+          ✓
+        </span>
+        <p>24/7 service availability across Bangladesh</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
       </div>
     </section>
   );

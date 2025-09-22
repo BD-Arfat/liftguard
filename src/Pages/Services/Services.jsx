@@ -8,6 +8,7 @@ import BookSlider from "./BookSlider/BookSlider";
 import NDTServices from "./NDTServices/NDTServices";
 import LiftguardPage from "./LiftguardPage/LiftguardPage";
 import InspectionCertification from "./Inspection&Certification/InspectionCertification";
+import TrainingSection from "./TrainingSection/TrainingSection";
 
 const Services = () => {
   useEffect(() => {
@@ -55,6 +56,7 @@ const Services = () => {
         {/* <LiftguardPage /> */}
         <PressureTest data-aos="fade-up" />
         <InspectionCertification />
+        <TrainingSection></TrainingSection>
         {/* BookSlider section start */}
         <BookSlider />
         {/* BookSlider section end */}
