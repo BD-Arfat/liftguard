@@ -1,15 +1,26 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../assets/logo.jpeg";
+import QRCode from "react-qr-code";
 
 const Footer = () => {
+  // Predefined WhatsApp number
+  const phoneNumber = "8801846615162"; // Country code সহ
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
+
   return (
-    <footer className="bg-[#0F766E] text-gray-300 py-10 font-sans">
+    <footer className="bg-[#0F766E] text-gray-300 py-10 font-sans relative">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4 md:px-8">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <img src={logo} alt="Logo" className="w-16 md:w-44 h-16 md:h-20 rounded-md mb-3" />
-          <span className="text-xl font-semibold text-white">LIFTGUARD SOLUTION</span>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-16 md:w-44 h-16 md:h-20 rounded-md mb-3"
+          />
+          <span className="text-xl font-semibold text-white">
+            LIFTGUARD SOLUTION
+          </span>
           <p className="mt-4 text-sm text-gray-300 max-w-xs">
             The Guardian of Equipment Safety ensures protection and reliability,
             keeping machines secure, preventing risks tirelessly. ⚙️🔒
@@ -42,9 +53,9 @@ const Footer = () => {
         </div>
 
         {/* Contact & Social */}
-        <div>
+        <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
-          <div className="text-sm space-y-2">
+          <div className="text-sm space-y-2 text-center md:text-left">
             <p>
               Email:{" "}
               <a
@@ -72,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex space-x-4 mt-6 justify-center md:justify-start">
+          <div className="flex space-x-5 mt-6">
             <a
               href="https://www.facebook.com/profile.php?id=61571056233771&mibextid=ZbWKwL"
               target="_blank"
@@ -106,6 +117,16 @@ const Footer = () => {
               <FaLinkedin />
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* WhatsApp QR Code at the bottom */}
+      <div className="flex justify-center mt-10">
+        <div className="bg-white p-5 rounded-xl shadow-lg">
+          <QRCode value={whatsappLink} size={80} />
+          <p className="text-gray-700 text-sm font-oswald mt-1 text-center">
+            WhatsApp
+          </p>
         </div>
       </div>
 

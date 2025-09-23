@@ -1,12 +1,56 @@
-import React from 'react';
-
+import React from "react";
 
 const Map = () => {
-    return (
-        <div>
-            
+  return (
+    <div className="w-full max-w-6xl mx-auto px-6 py-10">
+      {/* Heading */}
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">
+          🌍 Our Location
+        </h2>
+        <p className="mt-2 text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+          Visit our office at the heart of the city. Easy to find, easy to connect.
+        </p>
+      </div>
+
+      {/* Map Container */}
+      <div className="relative w-full h-[450px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
+        <iframe
+          title="Google Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.2290386895647!2d91.70359954931203!3d22.51824031070233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd30060f5ac1b%3A0x283e2e5984192dea!2sLiftguard%20solution!5e0!3m2!1sen!2sbd!4v1758644372768!5m2!1sen!2sbd"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        {/* Overlay Card */}
+        <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-gray-200 max-w-xs">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            📍 Liftguard Solution
+          </h3>
+          <p className="text-sm text-gray-600 mt-1">
+            Chattogram, Bangladesh
+          </p>
+          <a
+            href="https://www.google.com/maps/dir//GP94%2B87C+Liftguard+solution,+Dhaka+-+Chittagong+Hwy,+Kumira/@22.518301,91.705644,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30acd30060f5ac1b:0x283e2e5984192dea!2m2!1d91.7056444!2d22.518301?hl=en&entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 text-sm font-medium text-white bg-teal-500 hover:bg-teal-600 px-4 py-2 rounded-lg shadow-md transition"
+          >
+            Get Directions →
+          </a>
         </div>
-    );
+
+        {/* Watermark */}
+        <div className="absolute top-6 right-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-white px-4 py-2 rounded-xl shadow-lg">
+          <span className="text-sm font-semibold">Liftguard Map</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Map;

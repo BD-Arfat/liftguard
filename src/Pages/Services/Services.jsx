@@ -27,26 +27,26 @@ const Services = () => {
     <div className="overflow-hidden relative bg-gray-50">
       {/* Hero Header */}
       <div
-  id="hero-section"
-  className="relative w-full top-0 h-screen sm:h-56 md:h-80 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
-  style={{
-    backgroundImage: `url(https://img.freepik.com/premium-photo/indian-worker-special-uniform-helmet-controls-lift-manually_1429-11824.jpg)`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed", // Fixed background for desktop
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#0F766E]/80 to-[#0F1B3D]/80"></div>
+        id="hero-section"
+        className="relative w-full top-0 h-screen sm:h-56 md:h-80 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
+        style={{
+          backgroundImage: `url(https://img.freepik.com/premium-photo/indian-worker-special-uniform-helmet-controls-lift-manually_1429-11824.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed", // Fixed background for desktop
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0F766E]/80 to-[#0F1B3D]/80"></div>
 
-  {/* Header Content */}
-  <div className="relative z-10 text-center px-4">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-oswald tracking-widest drop-shadow-lg">
-      OUR SERVICES
-    </h2>
-    <hr className="border-t-4 border-[#10B981] w-16 sm:w-20 md:w-24 mx-auto mt-4" />
-  </div>
-</div>
+        {/* Header Content */}
+        <div className="relative z-10 text-center px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-oswald tracking-widest drop-shadow-lg">
+            OUR SERVICES
+          </h2>
+          <hr className="border-t-4 border-[#10B981] w-16 sm:w-20 md:w-24 mx-auto mt-4" />
+        </div>
+      </div>
 
 
       {/* Services Sections */}
