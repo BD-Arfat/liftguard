@@ -10,9 +10,9 @@ const OurAllClients = () => {
     const fetchClients = async () => {
       const data = [
         "https://krshiprecycling.com/_astro/logo_dark.3b76f077.svg",
-        "http://krsteelstructure.com/wp-content/uploads/2020/11/KRSteelStructureLed-logo.png",
         "https://arabshiprecycling.com/assets/ASBRL_Logo-Bs7ByH4m.png",
         "https://safetyzenbd.com/wp-content/uploads/2025/07/Safetyzen-Logo.webp",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9FItlIdWqQPH6BNR9-pD-F3PO1jBD4Ccxhogkm1zgcbYpggZwk1Qiu1McawVOTDSK8I&usqp=CAU",
         "https://cliftongroupbd.com/wp-content/uploads/2023/09/clifton-logo.png1_.png",
         "https://pms-bd.com/wp-content/uploads/2024/11/PMS_LOGO-removebg-preview.png",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzrqzd6xOiRJ4-rjn43QwHErBA9qACtcmFvQJNRZafln0BkhWjMDbL2FLxJU7Bj4mBjmI&usqp=CAU",

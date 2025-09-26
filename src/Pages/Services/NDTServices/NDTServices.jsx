@@ -14,6 +14,8 @@ const NDTServices = () => {
         "Leak Testing (LT) Inspection",
         "Eddy Current Testing (ET) Inspection",
       ],
+      image:
+        "https://5.imimg.com/data5/SELLER/Default/2024/5/418720732/MK/TG/ZV/162291983/1.jpg",
     },
     {
       title: "Advanced Inspection & Evaluation",
@@ -51,29 +53,20 @@ const NDTServices = () => {
   ];
 
   return (
-    <section
-      className="relative bg-fixed bg-cover bg-center py-28 px-6 overflow-hidden"
-      style={{
-        backgroundImage:
-          "url('https://www.sandberg.co.uk/wp-content/uploads/2025/02/welding.jpg')",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F766E]/80 to-[#0F1B3D]/80"></div>
-
-      <div className="relative max-w-7xl mx-auto text-white">
+    <section className="relative bg-white py-28 px-6">
+      <div className="max-w-7xl mx-auto text-gray-900">
         {/* Header */}
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-xl">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
             Our{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-500 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
               NDT Testing & Inspection
             </span>{" "}
             Services
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             At{" "}
-            <span className="font-semibold text-cyan-400">
+            <span className="font-semibold text-teal-600">
               Liftguard Solution
             </span>
             , we provide a wide range of Non-Destructive Testing (NDT) and
@@ -82,41 +75,59 @@ const NDTServices = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-2">
-          {services.map((service, index) => (
+        {/* ✅ 1️⃣ Core NDT Services (Image + Card) */}
+        <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
+          {/* Image */}
+          <div className="flex justify-center">
+            <img
+              src={services[0].image}
+              alt={services[0].title}
+              className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+            />
+          </div>
+
+          {/* Card */}
+          <div className="relative p-10 rounded-3xl border border-gray-200 bg-white shadow-lg hover:shadow-teal-300/40 hover:scale-[1.02] transition-all duration-500 w-full">
+            <div className="absolute -top-5 -left-5 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-black font-bold text-lg shadow-lg">
+              1
+            </div>
+            <h3 className="text-2xl font-bold mb-6 text-teal-600">
+              {services[0].title}
+            </h3>
+            <ul className="space-y-3">
+              {services[0].items.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-3 hover:text-teal-500 transition-colors duration-300"
+                >
+                  <span className="text-cyan-500 text-lg">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* ✅ 2️⃣ - 4️⃣ Other Services (Now side-by-side cards) */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {services.slice(1).map((service, index) => (
             <div
-              key={index}
-              className={`relative group p-8 rounded-3xl border border-white/10 backdrop-blur-xl shadow-lg hover:shadow-[0_0_50px_rgba(0,255,255,0.4)] hover:scale-105 transition-all duration-500`}
-              style={{
-                transform: index % 2 === 0 ? "translateY(0)" : "translateY(30px)",
-              }}
+              key={index + 1}
+              className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg hover:shadow-teal-300/30 transition-all duration-300"
             >
-              {/* Gradient Badge */}
-              <div className="absolute -top-5 -left-5 h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-black font-bold text-lg shadow-lg">
-                {index + 1}
-              </div>
-
-              {/* Card Content */}
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">
-                  {service.title}
-                </h3>
-                <ul className="space-y-3">
-                  {service.items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 hover:text-teal-400 transition-colors duration-300"
-                    >
-                      <span className="text-cyan-400 text-lg">✔</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Hover Glow */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/30 via-teal-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 blur-2xl transition duration-500"></div>
+              <h3 className="text-2xl font-bold mb-6 text-teal-700 text-left">
+                {service.title}
+              </h3>
+              <ul className="space-y-3 list-disc list-inside text-gray-700">
+                {service.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="hover:text-teal-600 transition-colors duration-200"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

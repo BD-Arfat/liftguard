@@ -17,7 +17,7 @@ const Map = () => {
       <div className="relative w-full h-[450px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
         <iframe
           title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.2290386895647!2d91.70359954931203!3d22.51824031070233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd30060f5ac1b%3A0x283e2e5984192dea!2sLiftguard%20solution!5e0!3m2!1sen!2sbd!4v1758644372768!5m2!1sen!2sbd"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58979.76599817729!2d91.67205113146048!3d22.49535046373629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd3ff861fe645%3A0x7ede2d746960e935!2sKR%20Steel%20Structure%20Limited!5e0!3m2!1sen!2sbd!4v1758905255525!5m2!1sen!2sbd"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -35,7 +35,7 @@ const Map = () => {
             Chattogram, Bangladesh
           </p>
           <a
-            href="https://www.google.com/maps/dir//GP94%2B87C+Liftguard+solution,+Dhaka+-+Chittagong+Hwy,+Kumira/@22.518301,91.705644,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30acd30060f5ac1b:0x283e2e5984192dea!2m2!1d91.7056444!2d22.518301?hl=en&entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58979.76599817729!2d91.67205113146048!3d22.49535046373629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd3ff861fe645%3A0x7ede2d746960e935!2sKR%20Steel%20Structure%20Limited!5e0!3m2!1sen!2sbd!4v1758905255525!5m2!1sen!2sbd"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 text-sm font-medium text-white bg-teal-500 hover:bg-teal-600 px-4 py-2 rounded-lg shadow-md transition"

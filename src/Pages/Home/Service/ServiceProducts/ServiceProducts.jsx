@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ServiceProducts = ({ service }) => {
   const { image, name, proposition } = service;
-  const [showFullText, setShowFullText] = useState(false);
+  const navigate = useNavigate(); // ✅ navigate hook
+
+  const handleReadMore = () => {
+    navigate("/services"); // ✅ এখানে তোমার সার্ভিস পেজের রাউট বসাও
+  };
 
   return (
     <motion.div
@@ -19,14 +24,15 @@ const ServiceProducts = ({ service }) => {
       <div className="p-5">
         <h3 className="text-xl font-semibold text-[#0F766E] mb-2">{name}</h3>
         <p className="text-gray-600 text-sm">
-          {showFullText ? proposition : `${proposition.slice(0, 80)}...`}
+          {proposition.slice(0, 80)}...
         </p>
 
+        {/* ✅ Read More button এখন service পেজে নিয়ে যাবে */}
         <button
-          onClick={() => setShowFullText(!showFullText)}
+          onClick={handleReadMore}
           className="mt-3 text-[#F59E0B] text-xs font-bold hover:underline"
         >
-          {showFullText ? "Show Less" : "Read More"}
+          Read More
         </button>
       </div>
     </motion.div>

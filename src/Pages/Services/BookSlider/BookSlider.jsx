@@ -1,4 +1,5 @@
 import React from "react";
+import pdf from '../../../assets/lift-guard-project-1.pdf'
 
 const BookSlider = () => {
   return (
@@ -27,7 +28,7 @@ const BookSlider = () => {
           <div className="relative group w-full md:w-96 h-[32rem] rounded-xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105">
             <div className="absolute inset-0 rounded-xl border-4 border-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 pointer-events-none"></div>
             <img
-              src="https://i.ibb.co/ZRK83V0W/Whats-App-Image-2025-09-19-at-21-05-23-60002715.jpg"
+              src="https://i.ibb.co.com/0Rr6XRjM/Screenshot-2025-09-26-214830.png"
               alt="Brochure 1"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -41,7 +42,7 @@ const BookSlider = () => {
           <div className="relative group w-full md:w-96 h-[32rem] rounded-xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105">
             <div className="absolute inset-0 rounded-xl border-4 border-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 pointer-events-none"></div>
             <img
-              src="https://i.ibb.co/JFr9sdXm/Whats-App-Image-2025-09-19-at-21-05-25-aa371a00.jpg"
+              src="https://i.ibb.co.com/qPxLKZf/Screenshot-2025-09-26-214857.png"
               alt="Brochure 2"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -55,7 +56,7 @@ const BookSlider = () => {
         {/* Download Button */}
         <div className="mt-12">
           <a
-            href="/brochure.pdf"
+            href={pdf}
             download
             className="inline-block bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg transform transition duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,255,0.5)]"
           >
