@@ -30,13 +30,13 @@ const VisionMission = () => {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid gap-8 lg:grid-cols-2 items-stretch">
+                <div  className="grid gap-8 lg:grid-cols-2 items-stretch">
                     {/* Vision Card */}
                     <article className="group relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-10 border border-white/20 hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
+                        <div data-aos="fade-right" className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-10 border border-white/20 hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
                             {/* Icon Container */}
-                            <div className="flex items-start gap-6 mb-6">
+                            <div  className="flex items-start gap-6 mb-6">
                                 <div className="flex-none w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -59,7 +59,7 @@ const VisionMission = () => {
                     {/* Mission Card */}
                     <article className="group relative">
                         <div className="absolute inset-0 bg-[#0F766E] rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-10 border border-white/20 hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
+                        <div data-aos="fade-left" className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-10 border border-white/20 hover:shadow-2xl transition-all duration-500 group-hover:transform group-hover:-translate-y-2">
                             {/* Icon Container */}
                             <div className="flex items-start gap-6 mb-6">
                                 <div className="flex-none w-16 h-16 rounded-2xl bg-[#0F766E] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">

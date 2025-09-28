@@ -19,7 +19,7 @@ const Banner = () => {
                 ></video>
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90 flex flex-col justify-center items-center text-white text-center px-4">
+                <div  className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90 flex flex-col justify-center items-center text-white text-center px-4">
                     {/* Heading */}
                     <h1 className="text-xl w-5/6 md:text-5xl lg:w-11/12 mx-auto lg:text-6xl font-extrabold mb-4 uppercase leading-tight">
                         <TypeAnimation
@@ -42,33 +42,33 @@ const Banner = () => {
                     </h1>
 
                     {/* Subheading */}
-                    <p className="text-sm md:text-2xl w-5/6 md:w-2/3 mt-3 mx-auto leading-relaxed text-gray-200">
+                    <p data-aos="zoom-in" className="text-sm md:text-2xl w-5/6 md:w-2/3 mt-3 mx-auto leading-relaxed text-gray-200">
                         Your trusted partner for innovative safety solutions in lifting gear and heavy equipment.
                         We prioritize accident prevention and workplace safety, offering reliable services to secure industrial operations.
                     </p>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col md:flex-row gap-4 mt-6">
+                    <div data-aos="zoom-in" className="flex flex-col md:flex-row gap-4 mt-6">
                         {/* WhatsApp Button */}
                         <a
-                            href="https://wa.me/8801846615162?text=Hello%20LiftGuard%20Solution!"
+                            href="https://wa.me/8801321229107?text=Hello%20LiftGuard%20Solution!"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#0F766E] hover:bg-[#0d5c58] text-white text-center px-5 py-2 rounded-lg text-sm md:text-base font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-amber-400"
                         >
                             <FaWhatsapp className="text-lg" />
-                            +88 01846615162
+                            +88 01321229107
                         </a>
 
                         {/* Email Button */}
                         <a
-                            href="mailto:arfat1islam5162@gmail.com?subject=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
+                            href="mailto:ranaliftguardsolution@gmail.com?subject=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-transparent hover:bg-[#0F766E] text-white px-5 py-2 rounded-lg text-sm md:text-base font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-amber-400"
                         >
                             <MdEmail className="text-lg" />
-                            arfat1islam5162@gmail.com
+                            ranaliftguardsolution@gmail.com
                         </a>
                     </div>
                 </div>

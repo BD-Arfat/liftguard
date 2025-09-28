@@ -21,6 +21,12 @@ const data = [
         proposition: "Non-destructive testing to identify potential flaws without causing damage to your equipment.",
         id: 3
     },
+    {
+        image: 'https://i.ibb.co.com/kV3HTSTW/Gemini-Generated-Image-xgkg9qxgkg9qxgkg.png',
+        name: "Training Services",
+        proposition: "Expert Training Services for Safe and Efficient Operations.",
+        id: 3
+    },
 ];
 
 export default data;

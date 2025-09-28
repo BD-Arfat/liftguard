@@ -7,31 +7,29 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll to add shadow and background color
+  // Scroll effect - background change
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Toggle mobile menu
   const toggleNavbar = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen(!isOpen);
     document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
-  // Close mobile menu
+  // Close menu
   const closeMenu = () => {
     setIsOpen(false);
     document.body.style.overflow = "auto";
   };
 
-  // Navbar link styles
-  const activeLinkClass = "text-amber-400 border-b-2 border-amber-400";
+  const activeLinkClass =
+    "text-amber-400 after:w-full after:bg-amber-400";
   const linkClass =
-    "block px-4 py-2 text-gray-200 hover:text-amber-400 hover:border-b-2 hover:border-amber-400 transition-all duration-300";
+    "relative block px-4 py-2 text-white hover:text-amber-400 transition-all duration-300 after:content-[''] after:block after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full";
 
   const navLinks = (
     <>
@@ -76,39 +74,50 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 font-sans transition-all duration-300 ${
-        isScrolled ? "bg-[#0F766E] shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 backdrop-blur-sm ${
+        isScrolled ? "bg-[#0F766E]/90 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" className="flex items-center gap-2">
           <img
-            className="w-14 md:w-28 md:h-12 rounded-md shadow-md"
             src={logo}
-            alt="LiftGuard Logo"
+            alt="Logo"
+            className="w-12 h-12 rounded-lg shadow-md border-2 border-white"
           />
+          <span className="text-2xl font-bold text-white tracking-wide hidden md:block">
+            LiftGuard
+          </span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-lg">{navLinks}</div>
+        <div className="hidden md:flex space-x-6 text-lg items-center">
+          {navLinks}
+        </div>
 
         {/* Mobile Menu Icon */}
-        <div
-          className="md:hidden text-2xl text-white cursor-pointer transition-transform transform hover:scale-110"
+        <button
+          className="md:hidden text-3xl text-white focus:outline-none transition-transform transform hover:scale-110"
           onClick={toggleNavbar}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
-        </div>
+        </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center text-lg text-white transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 w-full h-screen bg-[#0F766E]/95 backdrop-blur-xl flex flex-col items-center justify-center text-2xl space-y-8 transform transition-transform duration-500 ${
+          isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       >
         {navLinks}
+        <button
+          onClick={closeMenu}
+          className="mt-6 px-8 py-3 bg-amber-400 text-[#0F766E] font-semibold rounded-full hover:bg-amber-500 transition-all"
+        >
+          Get Started
+        </button>
       </div>
     </nav>
   );

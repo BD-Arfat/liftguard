@@ -12,6 +12,16 @@ body {
   position: relative; /* Ensure the name moves correctly within the body */
 }
 
+/* 🔥 Custom scrollbar hide utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE এবং Edge এর জন্য */
+  scrollbar-width: none; /* Firefox এর জন্য */
+}
+
 /* Floating name animation */
 .floating-name {
   position: fixed;
@@ -26,6 +36,18 @@ body {
   will-change: transform, opacity; /* Optimizes animation performance */
   z-index: 9999;
 }
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.3s ease forwards;
+}
+
+
+
 
 /* Define the keyframes for floating movement with smooth easing */
 @keyframes moveName {

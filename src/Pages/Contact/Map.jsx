@@ -16,7 +16,7 @@ const Map = () => {
       {/* Map Container */}
       <div className="relative w-full h-[450px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
         <iframe
-          title="Google Map"
+          title="Google Street View"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58979.76599817729!2d91.67205113146048!3d22.49535046373629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd3ff861fe645%3A0x7ede2d746960e935!2sKR%20Steel%20Structure%20Limited!5e0!3m2!1sen!2sbd!4v1758905255525!5m2!1sen!2sbd"
           width="100%"
           height="100%"
@@ -26,23 +26,8 @@ const Map = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
 
-        {/* Overlay Card */}
-        <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-gray-200 max-w-xs">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-            📍 Liftguard Solution
-          </h3>
-          <p className="text-sm text-gray-600 mt-1">
-            Chattogram, Bangladesh
-          </p>
-          <a
-            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58979.76599817729!2d91.67205113146048!3d22.49535046373629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd3ff861fe645%3A0x7ede2d746960e935!2sKR%20Steel%20Structure%20Limited!5e0!3m2!1sen!2sbd!4v1758905255525!5m2!1sen!2sbd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-3 text-sm font-medium text-white bg-teal-500 hover:bg-teal-600 px-4 py-2 rounded-lg shadow-md transition"
-          >
-            Get Directions →
-          </a>
-        </div>
+
+        
 
         {/* Watermark */}
         <div className="absolute top-6 right-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-white px-4 py-2 rounded-xl shadow-lg">

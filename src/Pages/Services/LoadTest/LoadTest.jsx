@@ -31,7 +31,9 @@ const LoadTest = () => {
 
             {/* Left Image */}
             <div className="lg:w-1/2 w-full relative z-10">
-              <img
+              <img data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
                 src="https://i.ibb.co.com/Kz5Kx613/Whats-App-Image-2025-09-21-at-22-06-09-4189453b.jpg"
                 alt="Load Testing"
                 className="rounded-3xl shadow-2xl w-full object-cover transform transition duration-500 hover:scale-105"
@@ -43,7 +45,9 @@ const LoadTest = () => {
             <div className="lg:w-1/2 w-full flex flex-col gap-12 relative z-20">
 
               {/* Card 1 */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
+              <div data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-4 flex items-center gap-3">
                   <span className="w-3 h-3 bg-[#0F766E] rounded-full animate-ping"></span>
                   Who We Are
@@ -58,7 +62,9 @@ const LoadTest = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
+              <div data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F766E] mb-6 flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#0F766E] rounded-full"></span>
                   Our Expertise
@@ -86,7 +92,8 @@ const LoadTest = () => {
           <div className="max-w-6xl mx-auto md:px-4 mt-10 md:mt-0 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* Card 1 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
               <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
                 Why Load Testing is Essential
               </h2>
@@ -98,7 +105,8 @@ const LoadTest = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
               <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
                 Our Load Testing Process
               </h2>

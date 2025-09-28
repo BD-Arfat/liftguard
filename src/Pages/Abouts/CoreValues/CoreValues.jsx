@@ -22,7 +22,7 @@ const CoreValues = () => {
         </p>
 
         {/* Values Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div data-aos="zoom-in-up" className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => (
             <div
               key={index}

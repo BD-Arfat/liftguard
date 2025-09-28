@@ -77,7 +77,7 @@ const OurGallery = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div  className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat, index) => (
             <button
               key={cat}
@@ -108,7 +108,7 @@ const OurGallery = () => {
             </p>
           </div>
         ) : (
-          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div data-aos="zoom-out-up" className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredImages.map((img, index) => (
               <div
                 key={index}
