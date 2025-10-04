@@ -19,7 +19,7 @@ const Banner = () => {
                 ></video>
 
                 {/* Gradient Overlay */}
-                <div  className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90 flex flex-col justify-center items-center text-white text-center px-4">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90 flex flex-col justify-center items-center text-white text-center px-4">
                     {/* Heading */}
                     <h1 className="text-xl w-5/6 md:text-5xl lg:w-11/12 mx-auto lg:text-6xl font-extrabold mb-4 uppercase leading-tight">
                         <TypeAnimation
@@ -62,7 +62,7 @@ const Banner = () => {
 
                         {/* Email Button */}
                         <a
-                            href="mailto:ranaliftguardsolution@gmail.com?subject=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=ranaliftguardsolution@gmail.com&su=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-transparent hover:bg-[#0F766E] text-white px-5 py-2 rounded-lg text-sm md:text-base font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-amber-400"
@@ -70,6 +70,7 @@ const Banner = () => {
                             <MdEmail className="text-lg" />
                             ranaliftguardsolution@gmail.com
                         </a>
+
                     </div>
                 </div>
             </div>

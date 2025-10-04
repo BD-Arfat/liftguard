@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LoadTest from "./LoadTest/LoadTest";
@@ -9,11 +9,22 @@ import NDTServices from "./NDTServices/NDTServices";
 import TrainingSection from "./TrainingSection/TrainingSection";
 
 const Services = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 2000,
       once: true,
     });
+  }, []);
+
+  // 👇 স্ক্রল পজিশন অনুযায়ী আইকন দেখানো/লুকানো
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Scroll To Top
@@ -31,7 +42,7 @@ const Services = () => {
           backgroundImage: `url(https://img.freepik.com/premium-photo/indian-worker-special-uniform-helmet-controls-lift-manually_1429-11824.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed", // Fixed background for desktop
+          backgroundAttachment: "fixed",
         }}
       >
         {/* Overlay */}
@@ -46,28 +57,26 @@ const Services = () => {
         </div>
       </div>
 
-
       {/* Services Sections */}
       <div className="mx-auto px-4 py-16 space-y-20">
         <LoadTest data-aos="fade-up" />
         <NDTServices />
-        {/* <LiftguardPage /> */}
         <PressureTest data-aos="fade-up" />
-        <TrainingSection></TrainingSection>
-        {/* BookSlider section start */}
+        <TrainingSection />
         <BookSlider />
-        {/* BookSlider section end */}
       </div>
 
-      {/* Scroll to Top Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <button
-          onClick={scrollToTop}
-          className="bg-[#0F766E] hover:bg-teal-800 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
-        >
-          <FaArrowUp size={20} />
-        </button>
-      </div>
+      {/* Scroll to Top Button - শর্তসাপেক্ষে দেখাবে */}
+      {showScrollTop && (
+        <div className="fixed bottom-6 right-6 z-50 transition-opacity duration-500">
+          <button
+            onClick={scrollToTop}
+            className="bg-[#0F766E] hover:bg-teal-800 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
+          >
+            <FaArrowUp size={20} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
