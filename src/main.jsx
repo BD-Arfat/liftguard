@@ -7,8 +7,6 @@ import Routers from './Routers/Routers';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={Routers} />
-    <div className="floating-name">
-      LIFTGUARD SOLUTION
-    </div>
+    
   </StrictMode>
 );

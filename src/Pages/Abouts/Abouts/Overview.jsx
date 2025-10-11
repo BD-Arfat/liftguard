@@ -43,10 +43,10 @@ const Overview = () => {
       >
         {/* Text */}
         <div className="md:w-1/2 space-y-6">
-          <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl mx-5 md:mx-0 text-justify text-[#0F1B3D] leading-relaxed">
+          <p className="text-base sm:text-lg md:ml-1 md:text-xl lg:text-lg xl:text-xl mx-5 md:mx-0 text-justify text-[#0F1B3D] leading-relaxed">
             Welcome to <span className="font-semibold text-[#0F766E]">Liftguard Solutions</span>, a proud sister concern of KR Group and a leading name in safety solutions in Bangladesh. We specialize in innovative and reliable safety technologies for lifting gear and heavy equipment, ensuring the highest standards of workplace safety and accident prevention.
           </p>
-          <p className="text-base sm:text-lg md:text-xl mx-5 md:mx-0 lg:text-lg xl:text-xl text-justify text-[#0F1B3D] leading-relaxed">
+          <p className="text-base sm:text-lg md:ml-1 md:text-xl mx-5 md:mx-0 lg:text-lg xl:text-xl text-justify text-[#0F1B3D] leading-relaxed">
             Founded with a mission to revolutionize safety in industrial and construction environments, Liftguard Solutions is committed to designing and delivering cutting-edge solutions that protect personnel and assets during lifting operations. Our services include comprehensive inspection, load testing, and pressure testing for a wide range of equipment, including cranes, forklifts, compressors, and lifting gear.
           </p>
         </div>

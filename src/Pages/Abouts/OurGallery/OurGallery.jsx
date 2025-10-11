@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 const images = [
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-8.webp", category: "Load Test", title: "Load Testing Equipment" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-9.webp", category: "Load Test", title: "Heavy Load Testing" },
+  { url: "https://i.ibb.co.com/fd64gm4N/Whats-App-Image-2025-10-09-at-16-16-02-995baacc.jpg", category: "Load Test", title: "Heavy Load Testing" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-1-scaled.webp", category: "Load Test", title: "Industrial Load Test" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-10.webp", category: "Load Test", title: "Crane Load Testing" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-11.webp", category: "Load Test", title: "Safety Load Testing" },
   { url: "https://www.mornlift.com/wp-content/uploads/2019/02/Lifting-up.jpg", category: "Lift", title: "Lifting Operations" },
-  { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", category: "Inspection", title: "Equipment Inspection" },
-  { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", category: "Inspection", title: "NDT Services" },
+  { url: "https://www.hndfcrane.com/wp-content/uploads/test-load.png", category: "Lift", title: "Equipment Inspection" },
+  { url: "https://www.hndfcrane.com/wp-content/uploads/EOT-crane-load-test.png", category: "Lift", title: "NDT Services" },
+  { url: "https://www.hydrowates.com/assets/images/content/load_test-crane.jpg", category: "Lift", title: "NDT Services" },
+  { url: "https://5.imimg.com/data5/SELLER/Default/2022/9/BJ/JC/SW/98261933/eot-crane-load-test-service-500x500.jpeg", category: "Lift", title: "NDT Services" },
 ];
 
 const categories = ["All", "Load Test", "Inspection", "Lift"];
@@ -48,8 +51,8 @@ const OurGallery = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-[#0F766E] rounded-full mix-blend-multiply filter blur-2xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-amber-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 left-40 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-amber-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-40 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4">
@@ -59,7 +62,7 @@ const OurGallery = () => {
             <span className="w-2 h-2 bg-[#0F766E] rounded-full mr-2 animate-pulse"></span>
             <span className="text-sm font-medium text-gray-600">Our Work Showcase</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#0F766E] via-emerald-600 to-teal-700 bg-clip-text text-transparent">
               Our
@@ -68,16 +71,16 @@ const OurGallery = () => {
               Gallery
             </span>
           </h2>
-          
+
           <div className="w-24 h-1 bg-gradient-to-r from-[#0F766E] to-amber-500 mx-auto mb-6 rounded-full"></div>
-          
+
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Explore our comprehensive portfolio of <span className="font-semibold text-[#0F766E]">professional services</span> and <span className="font-semibold text-amber-600">successful projects</span>
           </p>
         </div>
 
         {/* Category Filter */}
-        <div  className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat, index) => (
             <button
               key={cat}
@@ -85,11 +88,10 @@ const OurGallery = () => {
                 setActiveCategory(cat);
                 setSelectedIndex(null);
               }}
-              className={`group relative px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 ${
-                activeCategory === cat
+              className={`group relative px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 ${activeCategory === cat
                   ? "bg-gradient-to-r from-[#0F766E] to-emerald-600 text-white shadow-xl"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-400 hover:to-orange-400 hover:text-white shadow-lg"
-              }`}
+                }`}
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
@@ -112,9 +114,8 @@ const OurGallery = () => {
             {filteredImages.map((img, index) => (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-3xl shadow-xl cursor-pointer transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-2 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group relative overflow-hidden rounded-3xl shadow-xl cursor-pointer transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 onClick={() => setSelectedIndex(index)}
                 style={{
                   transitionDelay: `${index * 0.1}s`
@@ -125,13 +126,12 @@ const OurGallery = () => {
                   <img
                     src={img.url}
                     alt={img.title}
-                    className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${
-                      imageLoaded[index] ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${imageLoaded[index] ? 'opacity-100' : 'opacity-0'
+                      }`}
                     onLoad={() => handleImageLoad(index)}
                     loading="lazy"
                   />
-                  
+
                   {/* Loading Skeleton */}
                   {!imageLoaded[index] && (
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse"></div>
@@ -213,7 +213,7 @@ const OurGallery = () => {
                 alt={filteredImages[selectedIndex].title}
                 className="w-full max-h-[70vh] object-contain rounded-xl"
               />
-              
+
               {/* Image Info */}
               <div className="mt-4 text-center">
                 <h3 className="text-white text-xl font-semibold mb-2">

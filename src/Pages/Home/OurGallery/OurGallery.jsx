@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 const images = [
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-8.webp", category: "Load Test", title: "Load Testing Equipment" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-9.webp", category: "Load Test", title: "Heavy Load Testing" },
+  { url: "https://i.ibb.co.com/fd64gm4N/Whats-App-Image-2025-10-09-at-16-16-02-995baacc.jpg", category: "Load Test", title: "Heavy Load Testing" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-1-scaled.webp", category: "Load Test", title: "Industrial Load Test" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-10.webp", category: "Load Test", title: "Crane Load Testing" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-11.webp", category: "Load Test", title: "Safety Load Testing" },
   { url: "https://www.mornlift.com/wp-content/uploads/2019/02/Lifting-up.jpg", category: "Lift", title: "Lifting Operations" },
-  { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", category: "Inspection", title: "Equipment Inspection" },
-  { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", category: "Inspection", title: "NDT Services" },
+  { url: "https://www.hndfcrane.com/wp-content/uploads/test-load.png", category: "Lift", title: "Equipment Inspection" },
+  { url: "https://www.hndfcrane.com/wp-content/uploads/EOT-crane-load-test.png", category: "Lift", title: "NDT Services" },
+  { url: "https://www.hydrowates.com/assets/images/content/load_test-crane.jpg", category: "Lift", title: "NDT Services" },
+  { url: "https://5.imimg.com/data5/SELLER/Default/2022/9/BJ/JC/SW/98261933/eot-crane-load-test-service-500x500.jpeg", category: "Lift", title: "NDT Services" },
 ];
 
 const categories = ["All", "Load Test", "Inspection", "Lift"];
@@ -161,11 +164,7 @@ const OurGallery = () => {
                   </div>
 
                   {/* Title at bottom */}
-                  <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="text-white font-semibold text-sm leading-tight">
-                      {img.title}
-                    </h3>
-                  </div>
+                  
                 </div>
               </div>
             ))}
@@ -216,9 +215,7 @@ const OurGallery = () => {
 
               {/* Image Info */}
               <div className="mt-4 text-center">
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  {filteredImages[selectedIndex].title}
-                </h3>
+                
                 <span className="inline-block px-3 py-1 bg-[#0F766E]/60 backdrop-blur-sm text-white text-sm rounded-full">
                   {filteredImages[selectedIndex].category}
                 </span>

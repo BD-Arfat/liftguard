@@ -89,36 +89,65 @@ const LoadTest = () => {
           </div>
 
           {/* 🔽 NEW SECTION (Why Load Testing) – উপরেরটার নিচে আনলাম */}
-          <div className="max-w-6xl mx-auto md:px-4 mt-10 md:mt-0 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-            {/* Card 1 */}
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
-              <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
-                Why Load Testing is Essential
-              </h2>
-              <ul className="space-y-3 text-gray-700 list-disc list-inside text-lg">
-                <li>Confirms cranes and hoists can safely handle their rated capacity</li>
-                <li>Required for: New installations, after repairs, modifications, or alterations, before returning to service</li>
-                <li>Guarantees safe operation and compliance with international standards</li>
-              </ul>
+          <div className="md:max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-start gap-16 relative">
+            {/* Right Image (now on right side in large screen) */}
+            <div className="lg:w-1/2 w-full relative z-10">
+              <img
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                src="https://i.ibb.co.com/LzjHNXXs/Whats-App-Image-2025-10-09-at-16-16-02-61f59126.jpg"
+                alt="Load Testing"
+                className="rounded-3xl shadow-2xl w-full object-cover transform transition duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-black/20 rounded-3xl pointer-events-none"></div>
             </div>
 
-            {/* Card 2 */}
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left">
-              <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
-                Our Load Testing Process
-              </h2>
-              <ol className="space-y-3 text-gray-700 list-decimal list-inside text-lg">
-                <li>Define equipment objectives and requirements</li>
-                <li>Review operating procedures and usage conditions</li>
-                <li>Select proper tools and testing methods</li>
-                <li>Perform static and dynamic load tests</li>
-                <li>Verify performance, safety, and compliance</li>
-              </ol>
+            {/* Left Content Cards */}
+            <div className="lg:w-1/2 w-full flex flex-col gap-12 relative z-20">
+              {/* Card 1 */}
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left"
+              >
+                <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
+                  Why Load Testing is Essential
+                </h2>
+                <ul className="space-y-3 text-gray-700 list-disc list-inside text-lg">
+                  <li>Confirms cranes and hoists can safely handle their rated capacity</li>
+                  <li>
+                    Required for: New installations, after repairs, modifications, or
+                    alterations, before returning to service
+                  </li>
+                  <li>Guarantees safe operation and compliance with international standards</li>
+                </ul>
+              </div>
+
+              {/* Card 2 */}
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left"
+              >
+                <h2 className="text-3xl font-bold text-[#0F766E] mb-6">
+                  Our Load Testing Process
+                </h2>
+                <ol className="space-y-3 text-gray-700 list-decimal list-inside text-lg">
+                  <li>Define equipment objectives and requirements</li>
+                  <li>Review operating procedures and usage conditions</li>
+                  <li>Select proper tools and testing methods</li>
+                  <li>Perform static and dynamic load tests</li>
+                  <li>Verify performance, safety, and compliance</li>
+                </ol>
+              </div>
             </div>
+
+            {/* Decorative Dots */}
+            <div className="hidden lg:block absolute top-10 left-0 w-2 h-2 bg-[#0F766E] rounded-full animate-pulse"></div>
+            <div className="hidden lg:block absolute bottom-20 right-1/2 w-3 h-3 bg-[#0F766E] rounded-full animate-bounce"></div>
           </div>
+
         </div>
 
 

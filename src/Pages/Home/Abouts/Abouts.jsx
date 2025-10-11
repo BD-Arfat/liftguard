@@ -15,7 +15,7 @@ const Abouts = () => {
         <div
             className="relative w-full h-[900px] flex items-center justify-center text-center overflow-hidden"
             style={{
-                backgroundImage: `url(https://i.ibb.co.com/FbJ6SZ33/abouts1-BMo-Zzs6-M.jpg)`,
+                backgroundImage: `url(https://i.ibb.co.com/gFRvZbBK/Whats-App-Image-2025-10-09-at-16-16-02-61f59126.jpg)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
