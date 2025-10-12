@@ -1,6 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import bannerVideo from '../../../video/video.mp4';
+import bannerVideo from '../../../video/video-1.mp4';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
@@ -18,10 +18,10 @@ const Banner = () => {
                     playsInline
                 ></video>
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90 flex flex-col justify-center items-center text-white text-center px-4">
+                {/* Softer Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60 flex flex-col justify-center items-center text-white text-center px-4">
                     {/* Heading */}
-                    <h1 className="text-xl w-5/6 md:text-5xl lg:w-11/12 mx-auto lg:text-6xl font-extrabold mb-4 uppercase leading-tight">
+                    <h1 className="text-xl w-5/6 md:text-5xl lg:w-11/12 mx-auto lg:text-6xl font-extrabold mb-4 uppercase leading-tight drop-shadow-lg">
                         <TypeAnimation
                             sequence={[
                                 'Welcome To LiftGuard Solution',
@@ -42,7 +42,10 @@ const Banner = () => {
                     </h1>
 
                     {/* Subheading */}
-                    <p data-aos="zoom-in" className="text-sm md:text-2xl w-5/6 md:w-2/3 mt-3 mx-auto leading-relaxed text-gray-200">
+                    <p
+                        data-aos="zoom-in"
+                        className="text-sm md:text-2xl w-5/6 md:w-2/3 mt-3 mx-auto leading-relaxed text-gray-100 drop-shadow-md"
+                    >
                         Your trusted partner for innovative safety solutions in lifting gear and heavy equipment.
                         We prioritize accident prevention and workplace safety, offering reliable services to secure industrial operations.
                     </p>
@@ -70,7 +73,6 @@ const Banner = () => {
                             <MdEmail className="text-lg" />
                             ranaliftguardsolution@gmail.com
                         </a>
-
                     </div>
                 </div>
             </div>

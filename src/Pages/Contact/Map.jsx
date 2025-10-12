@@ -17,7 +17,7 @@ const Map = () => {
       <div className="relative w-full h-[450px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
         <iframe
           title="Google Street View"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58979.76599817729!2d91.67205113146048!3d22.49535046373629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd3ff861fe645%3A0x7ede2d746960e935!2sKR%20Steel%20Structure%20Limited!5e0!3m2!1sen!2sbd!4v1758905255525!5m2!1sen!2sbd"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5393.48648291917!2d91.7145949684835!3d22.50858466439666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd1004e743c93%3A0xdc4d8ef50ae3b094!2sLiftguard%20Solution!5e1!3m2!1sen!2sbd!4v1760286100331!5m2!1sen!2sbd"
           width="100%"
           height="100%"
           style={{ border: 0 }}

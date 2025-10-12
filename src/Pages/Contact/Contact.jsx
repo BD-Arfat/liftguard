@@ -93,14 +93,14 @@ const Contact = () => {
         {/* Social Media */}
         <div data-aos="fade-up" className="flex justify-center gap-6 text-3xl mb-16">
           {[
-            { icon: <FaFacebook />, link: "#" },
+            { icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=61571056233771" },
             { icon: <FaLinkedin />, link: "#" },
             { icon: <FaInstagram />, link: "#" },
             { icon: <FaWhatsapp />, link: "#" },
           ].map((social, index) => (
             <a
               key={index}
-              href={social.link}
+              href={social.link} target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-full 
                 bg-[#0F766E]/10 text-[#0F766E] hover:bg-[#0F766E] hover:text-white 
                 transform hover:scale-110 transition duration-300"
