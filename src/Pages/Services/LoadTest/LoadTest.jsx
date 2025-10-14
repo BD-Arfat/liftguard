@@ -2,7 +2,7 @@ import React from "react";
 
 const LoadTest = () => {
   return (
-    <section className="bg-gradient-to-b from-white via-[#0F766E]/5 to-white py-16  md:px-12 lg:px-20">
+    <section className="bg-gradient-to-b md:from-white md:via-[#0F766E]/5 md:to-white py-16  md:px-12 lg:px-20">
       <div className="md:max-w-7xl mx-auto space-y-20">
         {/* Hero Section */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -89,7 +89,7 @@ const LoadTest = () => {
           </div>
 
           {/* 🔽 NEW SECTION (Why Load Testing) – উপরেরটার নিচে আনলাম */}
-          <div className="md:max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-start gap-16 relative">
+          <div className="md:max-w-6xl mx-auto mt-10 flex flex-col lg:flex-row-reverse items-start gap-16 relative">
             {/* Right Image (now on right side in large screen) */}
             <div className="lg:w-1/2 w-full relative z-10">
               <img

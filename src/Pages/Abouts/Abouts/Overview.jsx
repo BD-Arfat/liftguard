@@ -15,7 +15,7 @@ const Overview = () => {
     <section className="overflow-hidden relative bg-gray-50">
       {/* Hero Header */}
       <div
-        className="relative w-full h-[60vh] sm:h-[70vh] md:h-96 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
+        className="relative w-full h-[100vh] sm:h-[100vh] md:h-96 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
         style={{
           backgroundImage: `url(https://media.licdn.com/dms/image/v2/D5612AQEXxbZkMGYI1Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1718732191197?e=2147483647&v=beta&t=DBoPpzPeEd1abmiGvbvAzdcq2WhUfugTwlg5UlwS_P8)`,
           backgroundSize: "cover",

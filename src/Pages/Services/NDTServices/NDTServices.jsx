@@ -53,7 +53,7 @@ const NDTServices = () => {
   ];
 
   return (
-    <section className="relative bg-white py-28 px-6">
+    <section className="relative md:bg-white py-28 px-6">
       <div className="max-w-7xl mx-auto text-gray-900">
         {/* Header */}
         <div className="text-center mb-24">
