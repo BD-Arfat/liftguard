@@ -42,7 +42,7 @@ const Rigger = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white via-[#0F766E]/5 to-white py-20 px-4 md:px-12 lg:px-20">
+    <section className="bg-gradient-to-b md:from-white md:via-[#0F766E]/5 md:to-white py-20 px-4 md:px-12 lg:px-20">
       {/* Section Heading */}
       <div data-aos="fade-down" className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F766E] uppercase mb-4">
@@ -72,10 +72,10 @@ const Rigger = () => {
 
             {/* Content */}
             <div className="md:w-1/2 text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0F766E] mb-3">
+              <h2 className="text-2xl md:text-3xl text-left font-bold text-[#0F766E] mb-3">
                 {service.title}
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg text-left leading-relaxed">
                 {service.description}
               </p>
             </div>

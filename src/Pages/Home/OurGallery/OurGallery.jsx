@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-8.webp", category: "Load Test", title: "Load Testing Equipment" },
-  { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-9.webp", category: "Load Test", title: "Heavy Load Testing" },
+  { url: "https://i.ibb.co.com/ZpzJ8fL0/Whats-App-Image-2025-10-14-at-22-28-27-30e607b7.jpg", category: "Load Test", title: "Load Testing Equipment" },
+  { url: "https://i.ibb.co.com/DDF7pTnX/Whats-App-Image-2025-10-14-at-22-22-07-ce839648.jpg", category: "Load Test", title: "Load Testing Equipment" },
   { url: "https://i.ibb.co.com/fd64gm4N/Whats-App-Image-2025-10-09-at-16-16-02-995baacc.jpg", category: "Load Test", title: "Heavy Load Testing" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-1-scaled.webp", category: "Load Test", title: "Industrial Load Test" },
   { url: "https://safetyzenbd.com/wp-content/uploads/2025/08/Load-Test-Service-10.webp", category: "Load Test", title: "Crane Load Testing" },

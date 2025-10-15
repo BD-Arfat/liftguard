@@ -64,14 +64,14 @@ const Banner = () => {
                         </a>
 
                         {/* Email Button */}
-                        <a
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=ranaliftguardsolution@gmail.com&su=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
+                        <a 
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=solutionliftguard@gmail.com.com&su=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-transparent hover:bg-[#0F766E] text-white px-5 py-2 rounded-lg text-sm md:text-base font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-amber-400"
                         >
                             <MdEmail className="text-lg" />
-                            ranaliftguardsolution@gmail.com
+                            solutionliftguard@gmail.com
                         </a>
                     </div>
                 </div>
