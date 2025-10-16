@@ -27,3 +27,5 @@ I would like to know more about your services.`;
         }
     }
 };
+export default Banner;
+
