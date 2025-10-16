@@ -27,6 +27,18 @@ const data = [
         proposition: "Expert Training Services for Safe and Efficient Operations.",
         id: 3
     },
+    {
+        image: 'https://vlm.ee/wp-content/uploads/2017/12/wsi-imageoptim-image-1404126121410-V-1024x612.jpg',
+        name: "(UTM) Ultrasonic Thickness Measurement",
+        proposition: "Ultrasonic Thickness Measurement (UTM) is a non-",
+        id: 3
+    },
+    {
+        image: 'https://5.imimg.com/data5/SELLER/Default/2024/11/467327429/YW/JW/AQ/25457586/pressure-calibration-services.jpg',
+        name: "Calibration Services",
+        proposition: "Accurate calibration of instruments is essential for safety",
+        id: 3
+    },
 ];
 
 export default data;

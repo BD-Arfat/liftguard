@@ -26,9 +26,9 @@ const Rigger = () => {
         "https://www.qanmos.com/wp-content/uploads/2024/09/rigger3.jpg",
     },
     {
-      title: "UTM Inspection Service",
+      title: "(UTM) Ultrasonic Thickness Measurement",
       description:
-        "Comprehensive inspection using Universal Testing Machines (UTM) to ensure safety, performance, and compliance according to international standards.",
+        "Ultrasonic Thickness Measurement (UTM) is a non-destructive testing method used to accurately determine the thickness of materials such as metal plates, pipes, tanks, and structures. Using high-frequency sound waves, UTM helps identify corrosion, erosion, or material loss without damaging the component. This inspection ensures safety, reliability, and compliance with industry standards.",
       image:
         "https://vlm.ee/wp-content/uploads/2017/12/wsi-imageoptim-image-1404126121410-V-1024x612.jpg",
     },
