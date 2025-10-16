@@ -33,11 +33,8 @@ const NDTServices = () => {
       items: [
         "Exothermic Welding Services",
         "Cathodic Protection Service",
-        "Civil NDT Inspection Service",
-        "Soil NDT Inspection Service",
         "Tank Calibration Service",
         "Pressure Vessel, Lifting & Boiler Inspection Service",
-        "TOFD (Time of Flight Diffraction) Inspection",
       ],
     },
     {
