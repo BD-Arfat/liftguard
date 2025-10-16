@@ -5,6 +5,29 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const Banner = () => {
+    // Function to handle email click
+    const handleEmailClick = (e) => {
+        e.preventDefault();
+        const email = 'solutionliftguard@gmail.com';
+        const subject = 'Inquiry About LiftGuard Solution';
+        const body = `Hello Team,
+
+I would like to know more about your services.`;
+
+        // Gmail compose URL
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // mailto fallback
+        const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Try opening Gmail first
+        const newWindow = window.open(gmailUrl, '_blank');
+        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+            // If blocked, fallback to mailto
+            window.location.href = mailtoUrl;
+        }
+    };
+
     return (
         <div className="mb-20 mx-auto font-sans">
             <div className="relative w-full h-screen">
@@ -64,15 +87,13 @@ const Banner = () => {
                         </a>
 
                         {/* Email Button */}
-                        <a 
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=solutionliftguard@gmail.com.com&su=Inquiry%20About%20LiftGuard%20Solution&body=Hello%20Team,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services."
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <button
+                            onClick={handleEmailClick}
                             className="bg-transparent hover:bg-[#0F766E] text-white px-5 py-2 rounded-lg text-sm md:text-base font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-amber-400"
                         >
                             <MdEmail className="text-lg" />
                             solutionliftguard@gmail.com
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
