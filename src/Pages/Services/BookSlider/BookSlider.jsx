@@ -1,188 +1,147 @@
-import React, { useEffect, useState } from "react";
-import pdf from "../../../assets/lift-guard-project-1.pdf"; // PDF path ঠিক রাখো
+import React, { useRef, useState, useEffect } from "react";
+import HTMLFlipBook from "react-pageflip";
+import pdfFile from "../../../assets/lift-guard-project-1.pdf";
 
 const BookSlider = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const bookRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [bookSize, setBookSize] = useState({ width: 400, height: 550 });
 
-  const images = [
-    {
-      src: "https://i.ibb.co.com/DfRtN9H1/Screenshot-2025-10-24-212658.png",
-      label: "Page 1",
-    },
-    {
-      src: "https://i.ibb.co.com/Y4GB45tM/Screenshot-2025-10-24-212745.png",
-      label: "Page 2",
-    },
-    {
-      src: "https://i.ibb.co.com/zhwrmZGs/Screenshot-2025-10-24-212805.png",
-      label: "Page 3",
-    },
+  const pages = [
+    { src: "https://i.ibb.co/DfRtN9H1/Screenshot-2025-10-24-212658.png", label: "Page 1" },
+    { src: "https://i.ibb.co/Y4GB45tM/Screenshot-2025-10-24-212745.png", label: "Page 2" },
+    { src: "https://i.ibb.co/zhwrmZGs/Screenshot-2025-10-24-212805.png", label: "Page 3" },
   ];
 
-  // Close modal on Escape key
+  const totalPages = pages.length;
+
+  // Handle responsive size
   useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") setSelectedImage(null);
+    const updateSize = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setBookSize({ width: 280, height: 400 });
+      } else if (width < 1024) {
+        setBookSize({ width: 400, height: 550 });
+      } else {
+        setBookSize({ width: 460, height: 620 });
+      }
     };
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
 
+  const nextPage = () => {
+    if (bookRef.current && currentPage < totalPages - 1) {
+      bookRef.current.pageFlip().flipNext();
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (bookRef.current && currentPage > 0) {
+      bookRef.current.pageFlip().flipPrev();
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  // Optional flip sound
+  useEffect(() => {
+    if (currentPage > 0) {
+      const flipSound = new Audio(
+        "https://cdn.pixabay.com/download/audio/2022/03/15/audio_0a7ef65a15.mp3?filename=page-flip-110626.mp3"
+      );
+      flipSound.volume = 0.2;
+      flipSound.play();
+    }
+  }, [currentPage]);
+
   return (
-    <div className="py-16 px-6 md:px-12">
-      {/* Custom styles for animation / small helpers */}
-      <style>{`
-        @keyframes glassZoom {
-          0% { transform: scale(.98); opacity: 0 }
-          100% { transform: scale(1); opacity: 1 }
-        }
-        .animate-glassZoom { animation: glassZoom 260ms ease-out; }
-
-        /* subtle floating animation for cards */
-        @keyframes floaty {
-          0% { transform: translateY(0px) }
-          50% { transform: translateY(-6px) }
-          100% { transform: translateY(0px) }
-        }
-        .floaty-slow { animation: floaty 6s ease-in-out infinite; }
-      `}</style>
-
-      <div
-        className="relative overflow-hidden rounded-2xl shadow-2xl"
-        style={{
-          backgroundImage:
-            "linear-gradient(180deg, rgba(5, 10, 20, 0.55), rgba(2,6,23,0.75)), url('https://i.pinimg.com/736x/7a/fa/0b/7afa0ba65edb517acc7267fb0c0fcbac.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* top gradient overlay */}
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm rounded-2xl pointer-events-none"></div>
-
-        <div className="relative z-10 py-12 px-6 md:px-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold font-oswald text-white mb-6 drop-shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex flex-col items-center justify-center py-12 px-4">
+      <h2 className="text-4xl md:text-5xl font-extrabold font-oswald text-white mb-6 drop-shadow-lg">
             Our{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-emerald-300 to-teal-400">
               Brochure
             </span>
           </h2>
 
-          {/* Cards container */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            {images.map((img, i) => (
+      <div className="relative flex items-center justify-center w-full max-w-[95vw] md:max-w-4xl overflow-visible">
+        {/* Prev Button */}
+        {currentPage > 0 && (
+          <button
+            onClick={prevPage}
+            className="absolute left-2 sm:left-4 md:left-[-4rem] bg-white/10 hover:bg-white/20 text-white text-2xl md:text-3xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-xl transition-all flex items-center justify-center backdrop-blur-md border border-white/10 z-10"
+            title="Previous Page"
+          >
+            ⬅️
+          </button>
+        )}
+
+        {/* Book Container */}
+        <div className="shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 rounded-2xl overflow-hidden backdrop-blur-lg bg-white/10 p-3 sm:p-4">
+          <HTMLFlipBook
+            width={bookSize.width}
+            height={bookSize.height}
+            ref={bookRef}
+            showCover={true}
+            className="rounded-xl shadow-2xl transition-all duration-700 ease-in-out"
+            flippingTime={1100}
+            usePortrait={true}
+            startPage={0}
+            onFlip={(e) => setCurrentPage(e.data)}
+            style={{
+              perspective: "2000px",
+            }}
+          >
+            {pages.map((page, index) => (
               <div
-                key={i}
-                onClick={() => setSelectedImage(img.src)}
-                className="relative w-full md:w-80 h-[28rem] rounded-xl cursor-pointer transform transition-all duration-400 hover:scale-105 hover:translate-y-[-6px] group"
+                key={index}
+                className="relative bg-white rounded-lg overflow-hidden shadow-inner"
+                style={{
+                  boxShadow: "inset 0 0 60px rgba(0,0,0,0.3), 0 0 25px rgba(0,0,0,0.4)",
+                  transformStyle: "preserve-3d",
+                  transition: "transform 0.7s cubic-bezier(0.4,0.2,0.2,1)",
+                }}
               >
-                {/* gradient border (outer) */}
-                <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-400">
-                  {/* glass panel (inner) */}
-                  <div className="w-full h-full rounded-lg backdrop-blur-md bg-white/6 border border-white/10 overflow-hidden relative flex flex-col">
-                    {/* optional subtle floating */}
-                    <div className="absolute -top-6 -left-10 w-32 h-32 rounded-full opacity-10 bg-gradient-to-r from-cyan-300 to-emerald-400 blur-3xl pointer-events-none"></div>
-
-                    {/* image */}
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-
-                    {/* label */}
-                    <div className="absolute bottom-4 left-4 text-white/95 font-semibold bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg text-sm">
-                      {img.label}
-                    </div>
-
-                    {/* glass shine on hover */}
-                    <div className="absolute inset-0 pointer-events-none transition-opacity duration-400 opacity-0 group-hover:opacity-60 rounded-lg"
-                      style={{
-                        background:
-                          "linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-                        mixBlendMode: "overlay",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* small floating accent (optional) */}
-                <div className="absolute -bottom-6 right-6 text-xs text-white/60">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-cyan-300/80 animate-pulse" />
-                    <span className="opacity-80">Preview</span>
-                  </div>
+                <img
+                  src={page.src}
+                  alt={page.label}
+                  className="w-full h-full object-cover"
+                  style={{ filter: "brightness(0.98) contrast(1.05)" }}
+                />
+                <div className="absolute bottom-3 right-4 text-gray-700 text-xs font-semibold">
+                  {page.label}
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Download Button */}
-          <div className="mt-10">
-            <a
-              href={pdf}
-              download
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105"
-            >
-              <span className="text-lg">📥</span>
-              <span>Download PDF</span>
-            </a>
-          </div>
+          </HTMLFlipBook>
         </div>
+
+        {/* Next Button */}
+        {currentPage < totalPages - 1 && (
+          <button
+            onClick={nextPage}
+            className="absolute right-2 sm:right-4 md:right-[-4rem] bg-white/10 hover:bg-white/20 text-white text-2xl md:text-3xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-xl transition-all flex items-center justify-center backdrop-blur-md border border-white/10 z-10"
+            title="Next Page"
+          >
+            ➡️
+          </button>
+        )}
       </div>
 
-      {/* Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/70 backdrop-blur-sm"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className="relative w-full max-w-4xl animate-glassZoom"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close */}
-            <button
-              onClick={() => setSelectedImage(null)}
-              title="Close"
-              className="absolute -top-6 -right-6 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg transition transform hover:scale-110"
-            >
-              ✕
-            </button>
+      {/* PDF Download Button */}
+      <a
+        href={pdfFile}
+        download
+        className="mt-10 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transform transition duration-300"
+      >
+        <span className="text-xl">📥</span> Download PDF
+      </a>
 
-            {/* modal content holder with glass */}
-            <div className="rounded-2xl overflow-hidden backdrop-blur-md bg-white/6 border border-white/10 shadow-2xl">
-              <div className="p-4 md:p-6">
-                <img
-                  src={selectedImage}
-                  alt="Full view"
-                  className="w-full h-auto md:h-[720px] object-contain rounded-lg"
-                />
-              </div>
-              {/* footer with download of single image (optional) */}
-              <div className="flex items-center justify-between px-6 py-4 border-t border-white/6">
-                <div className="text-sm text-white/80">{/* optionally page info */}</div>
-                <div className="flex items-center gap-3">
-                  <a
-                    href={selectedImage}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm bg-white/8 px-3 py-2 rounded-md text-white/90 hover:bg-white/12 transition"
-                  >
-                    Open image
-                  </a>
-                  <a
-                    href={pdf}
-                    download
-                    className="text-sm bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-white px-4 py-2 rounded-md shadow"
-                  >
-                    Download PDF
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <p className="mt-6 text-gray-400 text-sm text-center">
+        Swipe or use arrows to flip pages 📖
+      </p>
     </div>
   );
 };
