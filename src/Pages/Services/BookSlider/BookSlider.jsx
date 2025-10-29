@@ -15,17 +15,13 @@ const BookSlider = () => {
 
   const totalPages = pages.length;
 
-  // Handle responsive size
+  // Responsive size
   useEffect(() => {
     const updateSize = () => {
       const width = window.innerWidth;
-      if (width < 640) {
-        setBookSize({ width: 280, height: 400 });
-      } else if (width < 1024) {
-        setBookSize({ width: 400, height: 550 });
-      } else {
-        setBookSize({ width: 460, height: 620 });
-      }
+      if (width < 640) setBookSize({ width: 280, height: 400 });
+      else if (width < 1024) setBookSize({ width: 400, height: 550 });
+      else setBookSize({ width: 460, height: 620 });
     };
     updateSize();
     window.addEventListener("resize", updateSize);
@@ -46,32 +42,30 @@ const BookSlider = () => {
     }
   };
 
-  // Optional flip sound
+  // Page flip sound
   useEffect(() => {
     if (currentPage > 0) {
       const flipSound = new Audio(
         "https://cdn.pixabay.com/download/audio/2022/03/15/audio_0a7ef65a15.mp3?filename=page-flip-110626.mp3"
       );
-      flipSound.volume = 0.2;
+      flipSound.volume = 0.25;
       flipSound.play();
     }
   }, [currentPage]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex flex-col items-center justify-center py-12 px-4">
-      <h2 className="text-4xl md:text-5xl font-extrabold font-oswald text-white mb-6 drop-shadow-lg">
-            Our{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-emerald-300 to-teal-400">
-              Brochure
-            </span>
-          </h2>
+    <div className="min-h-screen  flex flex-col items-center justify-center py-16 px-4">
 
-      <div className="relative flex items-center justify-center w-full max-w-[95vw] md:max-w-4xl overflow-visible">
+      <h2 className="text-4xl md:text-5xl font-bold font-oswald text-gray-900 mb-8 text-center">
+        Our <span className="text-teal-500">Brochure</span>
+      </h2>
+
+      <div className="relative flex items-center justify-center w-full max-w-[95vw] md:max-w-4xl">
         {/* Prev Button */}
         {currentPage > 0 && (
           <button
             onClick={prevPage}
-            className="absolute left-2 sm:left-4 md:left-[-4rem] bg-white/10 hover:bg-white/20 text-white text-2xl md:text-3xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-xl transition-all flex items-center justify-center backdrop-blur-md border border-white/10 z-10"
+            className="absolute left-2 sm:left-4 md:left-[-4rem] bg-gray-200 hover:bg-gray-300 text-gray-800 text-2xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-md transition-all flex items-center justify-center z-10"
             title="Previous Page"
           >
             ⬅️
@@ -79,29 +73,25 @@ const BookSlider = () => {
         )}
 
         {/* Book Container */}
-        <div className="shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 rounded-2xl overflow-hidden backdrop-blur-lg bg-white/10 p-3 sm:p-4">
+        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xl p-1 sm:p-4 hover:shadow-[0_0_30px_rgba(0,0,0,0.15)] transition-all duration-500">
           <HTMLFlipBook
             width={bookSize.width}
             height={bookSize.height}
             ref={bookRef}
             showCover={true}
-            className="rounded-xl shadow-2xl transition-all duration-700 ease-in-out"
+            className="rounded-xl transition-all duration-700 ease-in-out"
             flippingTime={1100}
             usePortrait={true}
             startPage={0}
             onFlip={(e) => setCurrentPage(e.data)}
-            style={{
-              perspective: "2000px",
-            }}
           >
             {pages.map((page, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-lg overflow-hidden shadow-inner"
+                className="relative bg-white rounded-lg overflow-hidden"
                 style={{
-                  boxShadow: "inset 0 0 60px rgba(0,0,0,0.3), 0 0 25px rgba(0,0,0,0.4)",
-                  transformStyle: "preserve-3d",
-                  transition: "transform 0.7s cubic-bezier(0.4,0.2,0.2,1)",
+                  boxShadow:
+                    "inset 0 0 40px rgba(0,0,0,0.15), 0 0 10px rgba(0,0,0,0.1)",
                 }}
               >
                 <img
@@ -110,7 +100,7 @@ const BookSlider = () => {
                   className="w-full h-full object-cover"
                   style={{ filter: "brightness(0.98) contrast(1.05)" }}
                 />
-                <div className="absolute bottom-3 right-4 text-gray-700 text-xs font-semibold">
+                <div className="absolute bottom-3 right-4 text-gray-600 text-xs font-semibold bg-white/80 px-2 py-1 rounded-md shadow-sm">
                   {page.label}
                 </div>
               </div>
@@ -122,7 +112,7 @@ const BookSlider = () => {
         {currentPage < totalPages - 1 && (
           <button
             onClick={nextPage}
-            className="absolute right-2 sm:right-4 md:right-[-4rem] bg-white/10 hover:bg-white/20 text-white text-2xl md:text-3xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-xl transition-all flex items-center justify-center backdrop-blur-md border border-white/10 z-10"
+            className="absolute right-2 sm:right-4 md:right-[-4rem] bg-gray-200 hover:bg-gray-300 text-gray-800 text-2xl w-10 h-10 md:w-14 md:h-14 rounded-full shadow-md transition-all flex items-center justify-center z-10"
             title="Next Page"
           >
             ➡️
@@ -134,12 +124,12 @@ const BookSlider = () => {
       <a
         href={pdfFile}
         download
-        className="mt-10 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transform transition duration-300"
+        className="mt-10 inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
       >
         <span className="text-xl">📥</span> Download PDF
       </a>
 
-      <p className="mt-6 text-gray-400 text-sm text-center">
+      <p className="mt-6 text-gray-500 text-sm text-center">
         Swipe or use arrows to flip pages 📖
       </p>
     </div>
