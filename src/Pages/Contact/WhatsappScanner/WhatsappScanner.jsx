@@ -3,7 +3,7 @@ import QRCode from "react-qr-code";
 
 const WhatsappScanner = () => {
   // Predefined WhatsApp number
-  const phoneNumber = "8801846615162"; // Country code সহ
+  const phoneNumber = "8801321229107"; // Country code সহ
   const whatsappLink = `https://wa.me/${phoneNumber}`;
 
   return (
