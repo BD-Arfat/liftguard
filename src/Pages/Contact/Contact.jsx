@@ -6,6 +6,83 @@ import Map from "./Map";
 import WhatsappScanner from "./WhatsappScanner/WhatsappScanner";
 
 const Contact = () => {
+
+  const getOfficeStatus = () => {
+    const now = new Date();
+
+    const bdDate = new Date(
+      now.toLocaleString("en-US", { timeZone: "Asia/Dhaka" })
+    );
+
+    const day = bdDate.getDay();
+    const hour = bdDate.getHours();
+    const minute = bdDate.getMinutes();
+
+    const currentTime = hour * 60 + minute;
+
+    const currentTimeText = bdDate.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    const officeStart = 9 * 60;
+    const officeEnd = 18 * 60;
+
+    const holidays = [
+      "2026-02-21",
+      "2026-03-26",
+      "2026-04-14",
+      "2026-05-01",
+      "2026-12-16",
+      "2026-12-25",
+    ];
+
+    const dateStr = bdDate.toISOString().split("T")[0];
+
+    // Friday
+    if (day === 5) {
+      return {
+        open: false,
+        title: "Office is Closed",
+        reason: "Weekly Holiday (Friday)",
+        currentTime: currentTimeText,
+      };
+    }
+
+    // Government Holiday
+    if (holidays.includes(dateStr)) {
+      return {
+        open: false,
+        title: "Office is Closed",
+        reason: "Government Holiday",
+        currentTime: currentTimeText,
+      };
+    }
+
+    // Office Open
+    if (currentTime >= officeStart && currentTime < officeEnd) {
+      return {
+        open: true,
+        title: "Office is Open",
+        reason: "Visitors are welcome during office hours.",
+        currentTime: currentTimeText,
+      };
+    }
+
+    // Office Closed
+    return {
+      open: false,
+      title: "Office is Closed",
+      reason: "Office Hours: 9:00 AM – 6:00 PM",
+      currentTime: currentTimeText,
+    };
+  };
+
+
+
+  const officeStatus = getOfficeStatus();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -17,7 +94,7 @@ const Contact = () => {
         id="hero-section"
         className="relative w-full top-0 h-screen sm:h-56 md:h-80 lg:h-[32rem] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-lg"
         style={{
-          backgroundImage: `url(https://i.ibb.co.com/B2fdy3cw/female-engineer-inspecting-equipment-tablet.jpg)`,
+          backgroundImage: `url(https://i.ibb.co.com/nN6HTwKZ/Gemini-Generated-Image-fjcuezfjcuezfjcu.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -60,10 +137,24 @@ const Contact = () => {
               title: "⏰ Opening Hours",
               text: (
                 <>
-                  <p>Saturday – Thursday: 9:00 AM – 6:00 PM</p>
-                  <p>Friday: Closed</p>
+
+                  <h4
+                    className={`font-bold text-lg ${officeStatus.open
+                      ? "text-green-700"
+                      : "text-red-700"
+                      }`}
+                  >
+                    {officeStatus.open
+                      ? "🟢 Office is Open"
+                      : "🔴 Office is Closed"}
+                  </h4>
+
+                  <p className="text-gray-600 text-sm mt-2">
+                    {officeStatus.reason}
+                  </p>
                 </>
               ),
+
             },
           ].map((item, index) => (
             <div
