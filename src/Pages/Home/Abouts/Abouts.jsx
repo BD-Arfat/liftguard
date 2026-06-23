@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import aboutBg from "../../../assets/aboutbg.png";
 
 const Abouts = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Abouts = () => {
     <div className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
       {/* Background Image */}
       <img
-        src="https://i.ibb.co.com/yc2GW16Q/Whats-App-Image-2025-10-14-at-22-22-25-b4bbf14c-3.jpg"
+        src={aboutBg}
         alt="About Background"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

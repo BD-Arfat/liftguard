@@ -66,15 +66,6 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              Email:{" "}
-              <a
-                href="mailto:ranaliftguardsolution@gmail.com"
-                className="text-amber-400 hover:underline"
-              >
-                ranaliftguardsolution@gmail.com
-              </a>
-            </p>
-            <p>
               Phone:{" "}
               <a href="tel:01321229107" className="text-amber-400 hover:underline">
                 01321229107

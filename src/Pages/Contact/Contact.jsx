@@ -128,7 +128,6 @@ const Contact = () => {
               text: (
                 <>
                   <p>solutionliftguard@gmail.com</p>
-                  <p>ranaliftguardsolution@gmail.com</p>
                 </>
               ),
             },
